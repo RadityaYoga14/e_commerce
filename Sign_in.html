@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MISO Sign In</title>
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <link rel="stylesheet" href="E_commerce.css">
+</head>
+<body>
+    <section id="login-container">
+        <div class="login-form">
+            <h2>Sign In</h2>
+            <p class="login-message">Don't have an account? <a href="Create_account.html">Create Account</a>.</p>
+            <form action="#" method="post" class="form-login">
+                <div class="email-container">
+                    <label for="email" class="email-label">Email</label>
+                    <input type="email" placeholder="Enter your email" class="email" id="email" name="email" required>
+                    <br>
+                </div>
+                <div class="password-container">
+                    <label for="password" class="password-label">Password</label>
+                    <input type="password" placeholder="Enter your password" class="password" id="password" name="password" required>
+                    <br>
+                    <input class="submit-button" type="submit" value="Create Account">
+                </div>
+            </form>
+            <div class="social-login">
+                <br><br>
+                <p>Or login with Google & Facebook</p>
+                <p><a href="">Terms of Service</a></p>
+                <br>
+                <div class="g-signin2" data-onsuccess="onSignIn">Login with Google</div>
+                <br>
+                <button class="facebook-login">Login with Facebook</button>
+            </div>
+        </div>
+    </section>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</body>
+</html>

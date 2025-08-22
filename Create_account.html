@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MISO Create Account</title>
+    <link rel="stylesheet" href="E_commerce.css">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/api:client.js"></script>
+</head>
+<body>
+    <section id="login-container">
+        <div class="login-form">
+            <h2>Create an Account</h2>
+            <p class="login-message">Have an account? <a href="Sign_in.html">Sign In</a>.</p>
+            <form action="#" method="post" class="form-login">
+                <div class="email-container">
+                    <label for="email" class="email-label">Email</label>
+                    <input type="email" placeholder="Enter your email" class="email" id="email" name="email" required>
+                    
+                </div>
+                <div class="password-container">
+                    <label for="password" class="password-label">Password</label>
+                    <input type="password" placeholder="Enter your password" class="password" id="password" name="password" required>
+                    
+                </div>
+                <div class="password-container">
+                    <label for="confirm-password" class="confirm-password-label">Confirm Password</label>   
+                    <input type="password" placeholder="Confirm your password" class="confirm-password" id="confirm-password" name="confirm-password" required>
+                    <br>
+                    <input class="submit-button" type="submit" value="Create Account">
+                </div>
+            </form>
+            <div class="social-login">
+                <br><br>
+                <p>Or login with Google & Facebook</p>
+                <p><a href="">Terms of Service</a></p>
+                <br>
+                <div class="g-signin2" data-onsuccess="onSignIn">Login with Google</div>
+                <br>
+                <button class="facebook-login">Login with Facebook</button>
+            </div>
+        </div>
+    </section>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="google_login.js"></script>
+</body>
+</html>
