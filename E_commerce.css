@@ -118,6 +118,23 @@ p {
     background-color: #5e503f;
     color: #fff;
 }
+.login-button {
+    display: flex;
+    place-self: center;
+    /* width: 467px; */
+    padding: 0px 195px;
+    height: 35px;
+    text-align: center;
+    transition: all 300ms;
+    background-color: #c6ac8e;
+    font-size: large;
+    border-radius: 5px;
+    border: none;
+}
+.login-button:hover {
+    background-color: #5e503f;
+    color: #fff;
+}
 .social-login {
     display: flex;
     flex-direction: column;
