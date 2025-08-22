@@ -118,6 +118,10 @@ p {
     background-color: #5e503f;
     color: #fff;
 }
+.checkbox {
+    display: flex;
+    align-items: center;
+}
 .login-button {
     display: flex;
     place-self: center;
