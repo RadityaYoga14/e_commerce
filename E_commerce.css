@@ -29,7 +29,6 @@ p {
     line-height: 15px;
     place-self: center;
 }
-
 .form-login {
     padding: 10px 10px 10px 10px;
     /* gap: 10px; */
@@ -144,7 +143,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-top: 2px; */
+    gap: 5px;
 }
 .g-signin2 {
     display: flex;
