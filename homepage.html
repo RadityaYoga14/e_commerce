@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Miso</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="bg-[#d2bda3] px-6 py-3 flex items-center justify-between">
+    <!-- Logo + Nama -->
+    <div class="flex items-center gap-2">
+      <!-- Ganti dengan fotomu -->
+      <img src="Class of (1).png" alt="Logo" class="w-50 h-10 rounded-md object-cover">
+    </div>
+
+    <!-- Search bar -->
+    <div class="flex-1 max-w-2xl mx-6">
+      <div class="flex items-center bg-white rounded-full px-4 py-2">
+        <input type="text" placeholder="Cari produk" class="flex-1 outline-none text-gray-600 placeholder-gray-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Kategori + Icons -->
+    <div class="flex items-center gap-4">
+      <button class="bg-white rounded-full px-4 py-2 text-gray-700 flex items-center gap-2">
+        Kategori
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      
+      <!-- Ikon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364 4.318 12.682a4.5 4.5 0 010-6.364z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.293 2.707A1 1 0 007 17h10a1 1 0 00.894-1.447L17 13M7 13V6h13" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A7.967 7.967 0 0112 15c2.21 0 4.21.896 5.657 2.344M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    </div>
+  </nav>
+
+<!-- Banner Section -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
+  <!-- Banner besar kiri -->
+  <div class="md:col-span-2">
+    <div class="relative">
+      <img src="banner 1.jpg" alt="Banner 1" class="w-full h-[350px] md:h-[450px] object-cover rounded-xl">
+    </div>
+  </div>
+
+  <!-- Banner kecil kanan -->
+  <div>
+    <div class="relative">
+      <img src="banner 2.jpg" alt="Banner 2" class="w-full h-[450px] object-cover rounded-xl">
+    </div>
+  </div>
+</div>
+
+<!-- Brand Circle -->
+<div class="flex justify-center gap-6 my-6">
+  <div class="flex flex-col items-center">
+    <div class="w-20 h-20 bg-gray-300 rounded-full"></div>
+    <p class="mt-2 text-sm">adidas</p>
+  </div>
+  <div class="flex flex-col items-center">
+    <div class="w-20 h-20 bg-gray-300 rounded-full"></div>
+    <p class="mt-2 text-sm">ZARA</p>
+  </div>
+  <div class="flex flex-col items-center">
+    <div class="w-20 h-20 bg-gray-300 rounded-full"></div>
+    <p class="mt-2 text-sm">erigo</p>
+  </div>
+  <div class="flex flex-col items-center">
+    <div class="w-20 h-20 bg-gray-300 rounded-full"></div>
+    <p class="mt-2 text-sm">brand lokal</p>
+  </div>
+  <div class="flex flex-col items-center">
+    <div class="w-20 h-20 bg-gray-300 rounded-full"></div>
+    <p class="mt-2 text-sm">brand luxury</p>
+  </div>
+</div>
+
+
+<!-- Judul -->
+<h2 class="text-center font-bold text-lg my-4">Pilihan</h2>
+
+<!-- Kategori -->
+<div class="flex justify-center gap-4 text-2xl">
+  <div class="w-20 h-20 bg-[#e9ddcf] rounded-lg flex items-center justify-center">👕</div>
+  <div class="w-20 h-20 bg-[#e9ddcf] rounded-lg flex items-center justify-center">👔</div>
+  <div class="w-20 h-20 bg-[#e9ddcf] rounded-lg flex items-center justify-center">👖</div>
+  <div class="w-20 h-20 bg-[#e9ddcf] rounded-lg flex items-center justify-center">👗</div>
+  <div class="w-20 h-20 bg-[#e9ddcf] rounded-lg flex items-center justify-center">🧕</div>
+  <div class="w-20 h-20 bg-[#e9ddcf] rounded-lg flex items-center justify-center">👟</div>
+</div>
+
+
+<section class="px-8 py-12">
+  <h2 class="text-2xl font-semibold text-center mb-10">Mungkin anda suka....</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+    <!-- Card Produk -->
+    <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+      <div class=" flex items-center justify-center mb-4">
+        <img src="produk1.jpg" class="w-52 h-64 object-cover rounded-lg" alt="Produk 1">
+      </div>
+      <h3 class="text-sm font-medium">Callie Cotton X Hello Kitty</h3>
+      <p class="text-lg font-bold">Rp 860.000</p>
+      <p class="text-sm text-gray-600">⭐ 4.6 | 10rb+ terjual</p>
+    </div>
+
+    <!-- Card Produk -->
+    <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+      <div class="flex items-center justify-center mb-4">
+        <img src="produk 2.webp" class="w-52 h-64 object-cover rounded-lg" alt="Produk 2">
+      </div>
+      <h3 class="text-sm font-medium">ZARA - Kemeja Wanita</h3>
+      <p class="text-lg font-bold">Rp 799.000</p>
+      <p class="text-sm text-gray-600">⭐ 4.2 | 10rb+ terjual</p>
+    </div>
+
+    <!-- Card Produk -->
+    <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+      <div class="flex items-center justify-center mb-4">
+        <img src="produk  3.avif" class="w-52 h-64 object-cover rounded-lg" alt="Produk 3">
+      </div>
+      <h3 class="text-sm font-medium">ADIDAS - Samba OG White Gum</h3>
+      <p class="text-lg font-bold">Rp 2.000.000</p>
+      <p class="text-sm text-gray-600">⭐ 4.8 | 10rb+ terjual</p>
+    </div>
+
+    <!-- Card Produk -->
+    <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+      <div class="flex items-center justify-center mb-4">
+        <img src="produk 4.webp" class="w-52 h-64 object-cover rounded-lg" alt="Produk 2">
+      </div>
+      <h3 class="text-sm font-medium">KIYANA - Jennie Skirt</h3>
+      <p class="text-lg font-bold">Rp 75.000</p>
+      <p class="text-sm text-gray-600">⭐ 4.8 | 2.8rb+ terjual</p>
+    </div>
+
+    <!-- Card Produk -->
+    <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+      <div class="flex items-center justify-center mb-4">
+        <img src="produk 5.webp" class="w-52 h-64 object-cover rounded-lg" alt="Produk 3">
+      </div>
+      <h3 class="text-sm font-medium">COLORBOX - Cargo Denim Pants Lt. Blue</h3>
+      <p class="text-lg font-bold">Rp 134.955</p>
+      <p class="text-sm text-gray-600">⭐ 5.0 | 5rb+ terjual</p>
+    </div>
+</section>
+
+
+
+
+</body>
+</html>

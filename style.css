@@ -1,0 +1,42 @@
+/* Reset dasar untuk margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f3e7;
+}
+
+/* Gaya untuk banner */
+.banner {
+    text-align: center;
+    background: url('banner-image.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 20px;
+}
+
+/* Gaya untuk bagian pilihan */
+.options {
+    text-align: center;
+}
+
+/* Gaya untuk grid produk */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Gaya footer */
+footer {
+    background-color: #f8f3e7;
+    padding: 20px;
+    text-align: center;
+}

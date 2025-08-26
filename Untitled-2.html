@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MISO Fashion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom styles for the subtle beige theme */
+    body {
+      background-color: #f8f2eb;
+      font-family: "Inter", sans-serif;
+      color: #1c1c1c;
+    }
+    .header-bg {
+      background-color: #cbb89e;
+      background-image:
+        radial-gradient(circle at top left, rgba(255 255 255 / 0.15) 25%, transparent 26%),
+        radial-gradient(circle at bottom right, rgba(255 255 255 / 0.1) 15%, transparent 70%);
+      background-repeat: no-repeat;
+      background-size: 6rem 6rem;
+    }
+    .footer-bg {
+      background-color: #cbb89e;
+      background-image:
+        radial-gradient(circle at top left, rgba(255 255 255 / 0.15) 25%, transparent 26%),
+        radial-gradient(circle at bottom right, rgba(255 255 255 / 0.1) 15%, transparent 70%);
+      background-repeat: no-repeat;
+      background-size: 7rem 7rem;
+    }
+    /* Icon container */
+    .category-icon {
+      background-color: #e6ddd1;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .category-icon:hover {
+      background-color: #d2bfa7;
+    }
+    /* Card placeholder */
+    .card-placeholder {
+      background-color: #e6ddd1;
+      border-radius: 0.5rem;
+      width: 12rem;
+      height: 14rem;
+    }
+    /* Text ellipsis for product names */
+    .product-name {
+      @apply text-sm font-medium truncate;
+      max-width: 12rem;
+    }
+    /* Small cards images */
+    .banner-small {
+      border-radius: 1rem;
+      overflow: hidden;
+      position: relative;
+    }
+    /* Overlay text on banner images */
+    .banner-text-large {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .banner-text-small {
+      position: absolute;
+      bottom: 0.5rem;
+      left: 0.75rem;
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-shadow: 0 0 6px rgba(0,0,0,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .banner-subtext-small {
+      position: absolute;
+      bottom: 0.25rem;
+      left: 0.75rem;
+      color: white;
+      font-size: 0.8rem;
+      opacity: 0.85;
+      text-shadow: 0 0 6px rgba(0,0,0,0.5);
+    }
+    /* Icons in banner */
+    .icon-heart, .icon-bubble {
+      filter: drop-shadow(0 0 2px rgba(0,0,0,0.6));
+    }
+    /* Responsive grid for products */
+    @media (min-width: 640px) {
+      .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+      }
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- HEADER -->
+  <header class="header-bg p-4 sticky top-0 z-30 shadow-md flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-md bg-transparent border border-white flex items-center justify-center cursor-pointer" aria-label="Logo MISO">
+        <svg fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" viewBox="0 0 24 24" >
+          <path d="M3 3h18v18H3z"></path>
+          <path d="M15 7h-6v10h6z"></path>
+          <path d="M9 7v-4h6v4"></path>
+          <path d="M6 16h12"></path>
+        </svg>
+      </div>
+      <span class="text-white font-semibold text-lg select-none">miso</span>
+    </div>
+
+    <form class="flex-grow max-w-xl relative" role="search" aria-label="Cari produk">
+      <input
+        type="search"
+        placeholder="Cari produk"
+        aria-label="Cari produk"
+        class="w-full rounded-full py-2 px-4 pr-10 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#cbb89e]"
+      />
+      <button type="submit" aria-label="Search" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-700">
+        <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" viewBox="0 0 24 24" >
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </form>
+
+    <div class="flex items-center space-x-3">
+      <button aria-label="Filter kategori" title="Kategori" class="bg-white text-gray-700 rounded-full px-3 py-1 flex items-center space-x-1 hover:bg-gray-100">
+        <span class="select-none">Kategori</span>
+        <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" viewBox="0 0 24 24" >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <button aria-label="Favorit" title="Favorit" class="text-white hover:text-[#d9cba3]">
+        <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" viewBox="0 0 24 24" >
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+      </button>
+      <button aria-label="Keranjang Belanja" title="Keranjang Belanja" class="text-white hover:text-[#d9cba3]">
+        <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" viewBox="0 0 24 24" >
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+      </button>
+      <button aria-label="Profil saya" title="Profil saya" class="text-white hover:text-[#d9cba3]">
+        <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" viewBox="0 0 24 24" >
+          <circle cx="12" cy="7" r="4"></circle>
+          <path d="M5.5 21a7.5 7.5 0 0 1 13 0"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-grow container mx-auto p-4 space-y-8">
+
+    <!-- Banner Area -->
+    <section class="flex flex-col sm:flex-row gap-6">
+      <div class="relative flex-1 rounded-xl overflow-hidden shadow-lg">
+        <img
+          src="c:\Users\Adrienne\Downloads\project kelompok\banner 1.jpg"width="1122" height="573"
+          class="w-full h-full object-cover"
+        />
+        <div class="banner-text-large select-none">
+          <div>MISO</div>
+          <div class="italic" style="font-size:1rem; font-weight: 400;">fashion collection</div>
+          <div class="text-sm mt-1 font-normal">We are in bali, get now</div>
+        </div>
+      </div>
+      <div class="relative w-64 rounded-xl overflow-hidden shadow-lg banner-small">
+        <img
+          src="c:\Users\Adrienne\Downloads\project kelompok\banner 2.jpg"
+          alt="Two fashionable young adults in casual white and beige clothes posing against a minimalist gray wall with overlay text 'MISO IN BALI, B1G1 for you, get now in August'"
+          class="w-full h-full object-cover"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x400?text=Image+not+available+BALI+promo';"
+        />
+        <div class="absolute top-2 left-2 flex space-x-2 z-20">
+          <svg class="icon-heart w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
+          </svg>
+          <svg class="icon-bubble w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h10a2 2 0 012 2v10z"></path>
+          </svg>
+        </div>
+        <div class="banner-text-small select-none">MISO IN BALI</div>
+        <div class="banner-subtext-small select-none">B1G1 for you, get now in august</div>
+      </div>
+    </section>
+
+    <!-- Pilihan Categories -->
+    <section class="text-center space-y-3">
+      <h2 class="text-lg font-semibold mb-4">Pilihan</h2>
+      <div class="flex justify-center space-x-6">
+        <button class="category-icon" aria-label="Category T-Shirt" title="T-shirt">
+          <svg fill="none" stroke="#5a4635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" viewBox="0 0 24 24">
+            <path d="M16 4l2 5v7l-2 2h-8l-2-2v-7l2-5" />
+            <path d="M12 4v16" />
+          </svg>
+        </button>
+        <button class="category-icon" aria-label="Category Shirt" title="Shirt">
+          <svg fill="none" stroke="#5a4635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" viewBox="0 0 24 24">
+            <path d="M8 2h8l2 7-2 7H8L6 9l2-7z"/>
+            <path d="M9 9h6" />
+          </svg>
+        </button>
+        <button class="category-icon" aria-label="Category Pants" title="Pants">
+          <svg fill="none" stroke="#5a4635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" viewBox="0 0 24 24">
+            <rect x="7" y="4" width="3" height="16" rx="1"/>
+            <rect x="14" y="4" width="3" height="16" rx="1"/>
+          </svg>
+        </button>
+        <button class="category-icon" aria-label="Category Skirt" title="Skirt">
+          <svg fill="none" stroke="#5a4635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" viewBox="0 0 24 24">
+            <path d="M8 4h8l-4 16z"/>
+          </svg>
+        </button>
+        <button class="category-icon" aria-label="Category Belt" title="Belt or accessories">
+          <svg fill="none" stroke="#5a4635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="7" />
+            <path d="M16 12h-8" />
+          </svg>
+        </button>
+        <button class="category-icon" aria-label="Category Shoes" title="Shoes">
+          <svg fill="none" stroke="#5a4635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" viewBox="0 0 24 24">
+            <path d="M3 21h18v-2a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3z"/>
+            <path d="M7 10h10l2 6H5z"/>
+            <path d="M3 14h18" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Mungkin anda suka... Produk -->
+    <section>
+      <h2 class="text-lg font-semibold mb-6">Mungkin anda suka....</h2>
+      <div class="grid products-grid gap-6 justify-items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+
+        <!-- Product card actual items -->
+        <article class="w-48 flex flex-col items-center text-center space-y-2">
+          <img src="https://placehold.co/192x256?text=Callie+Cotton+Cardigan" alt="Callie Cotton X Hello Kitty navy blue cardigan with white collar" class="w-48 h-64 object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/192x256?text=Image+not+available';" />
+          <p class="product-name">Callie Cotton X Hello Kit…</p>
+          <p class="text-xs font-semibold">Rp 860.000</p>
+          <p class="text-xs text-yellow-600">
+            <svg class="inline-block w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927a1 1 0 011.902 0l1.286 3.955a1 1 0 00.95.69h4.158a1 1 0 01.592 1.806l-3.37 2.448a1 1 0 00-.364 1.118l1.286 3.955a1 1 0 01-1.538 1.118L10 13.347l-3.37 2.448a1 1 0 01-1.538-1.118l1.286-3.955a1 1 0 00-.364-1.118L3.644 9.378a1 1 0 01.592-1.806h4.158a1 1 0 00.95-.69l1.286-3.955z"/></svg>
+            4.6 | 10rb+ terjual
+          </p>
+        </article>
+
+        <article class="w-48 flex flex-col items-center text-center space-y-2">
+          <img src="https://placehold.co/192x256?text=ZARA+Kemeja+Wanita" alt="ZARA Kemeja wanita beige lengan pendek button down" class="w-48 h-64 object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/192x256?text=Image+not+available';" />
+          <p class="product-name"><span class="font-semibold">ZARA -</span> Kemeja wanita..</p>
+          <p class="text-xs font-semibold">Rp 799.000</p>
+          <p class="text-xs text-yellow-600">
+            <svg class="inline-block w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927a1 1 0 011.902 0l1.286 3.955a1 1 0 00.95.69h4.158a1 1 0 01.592 1.806l-3.37 2.448a1 1 0 00-.364 1.118l1.286 3.955a1 1 0 01-1.538 1.118L10 13.347l-3.37 2.448a1 1 0 01-1.538-1.118l1.286-3.955a1 1 0 00-.364-1.118L3.644 9.378a1 1 0 01.592-1.806h4.158a1 1 0 00.95-.69l1.286-3.955z"/></svg>
+            5 | 10rb+ terjual
+          </p>
+        </article>
+
+        <article class="w-48 flex flex-col items-center text-center space-y-2">
+          <img src="https://placehold.co/192x256?text=COMING+SOON+BRAND" alt="Black button up jacket brand coming soon product placeholder" class="w-48 h-64 object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/192x256?text=Image+not+available';" />
+          <p class="product-name"><span class="font-bold uppercase">BRAND</span> - COMING SOON</p>
+          <p class="text-xs font-semibold">Rp 799.000</p>
+          <p class="text-xs text-yellow-600">
+            <svg class="inline-block w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927a1 1 0 011.902 0l1.286 3.955a1 1 0 00.95.69h4.158a1 1 0 01.592 1.806l-3.37 2.448a1 1 0 00-.364 1.118l1.286 3.955a1 1 0 01-1.538 1.118L10 13.347l-3.37 2.448a1 1 0 01-1.538-1.118l1.286-3.955a1 1 0 00-.364-1.118L3.644 9.378a1 1 0 01.592-1.806h4.158a1 1 0 00.95-.69l1.286-3.955z"/></svg>
+            4.6 | 10rb+ terjual
+          </p>
+        </article>
+
+        <!-- Placeholder cards for more BRAND COMING SOON -->
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+        <div class="card-placeholder" aria-label="Brand coming soon placeholder product card"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-bg mt-12 p-8 select-none">
+    <div class="container mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-3 gap-8 text-white font-semibold text-sm">
+      <!-- MISO Logo and info -->
+      <div class="flex flex-col space-y-4">
+        <div class="w-12 h-12 rounded-md bg-transparent border border-white flex items-center justify-center" aria-label="Logo MISO">
+          <svg fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" viewBox="0 0 24 24" >
+            <path d="M3 3h18v18H3z"></path>
+            <path d="M15 7h-6v10h6z"></path>
+            <path d="M9 7v-4h6v4"></path>
+            <path d="M6 16h12"></path>
+          </svg>
+        </div>
+        <span class="text-2xl font-bold">MISO</span>
+        <nav class="space-y-1 text-[0.85rem] font-normal">
+          <a href="#" class="block hover:underline">Tentang MISO</a>
+          <a href="#" class="block hover:underline">Hak Kekayaan Intelektual</a>
+          <a href="#" class="block hover:underline">Syarat &amp; Ketentuan</a>
+          <a href="#" class="block hover:underline">Kebijakan Privasi</a>
+          <a href="#" class="block hover:underline">Sertifikat</a>
+          <a href="#" class="block hover:underline">Blog</a>
+        </nav>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 text-[0.9rem] font-normal">
+        <div>
+          <h3 class="text-white font-semibold mb-3">PEMBELIAN</h3>
+          <nav class="space-y-1">
+            <a href="#" class="block hover:underline">MISO Help Center</a>
+            <a href="#" class="block hover:underline">Pelacakan Paket</a>
+            <a href="#" class="block hover:underline">Pengembalian Produk</a>
+          </nav>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold mb-3">PENJUALAN</h3>
+          <nav class="space-y-1">
+            <a href="#" class="block hover:underline">MISO Brand Applications</a>
+            <a href="#" class="block hover:underline">MISO Affiliate Program</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-[0.9rem] font-normal">
+        <h3 class="text-white font-semibold mb-2">IKUTI KAMI:</h3>
+        <div class="flex space-x-5 text-white text-lg">
+          <a href="#" aria-label="Instagram" title="Instagram" class="hover:text-[#d9cba3]">
+            <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm4.25 4a4 4 0 100 8 4 4 0 000-8zm7-.5a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
+          </a>
+          <a href="#" aria-label="X Twitter" title="X (Twitter)" class="hover:text-[#d9cba3]">
+            <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M23 3a10.9 10.9 0 01-3.14.86 4.48 4.48 0 001.98-2.48 9.08 9.08 0 01-2.88 1.1 4.52 4.52 0 00-7.69 4.12A12.77 12.77 0 013 4.1a4.52 4.52 0 001.4 6.04 4.48 4.48 0 01-2.05-.56v.06a4.52 4.52 0 003.63 4.43 4.49 4.49 0 01-2.04.08 4.52 4.52 0 004.22 3.17A9.06 9.06 0 012 19.54 12.77 12.77 0 008.29 21c7.55 0 11.67-6.22 11.67-11.6 0-.18-.01-.35-.02-.53A8.1 8.1 0 0023 3z"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest" title="Pinterest" class="hover:text-[#d9cba3]">
+            <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M12 2.04c-5.47 0-10 4.46-10 9.94 0 4.3 2.7 7.94 6.48 8.41-.08-.7-.15-1.77 0-2.54.16-.7 1.02-4.48 1.02-4.48s-.26-.52-.26-1.28c0-1.2.7-2.1 1.57-2.1.74 0 1.1.56 1.1 1.24 0 .75-.48 1.87-.73 2.91-.21.88.44 1.59 1.3 1.59 1.56 0 2.77-1.56 2.77-3.8 0-2.41-1.73-4.1-4.21-4.1-2.87 0-4.56 2.13-4.56 4.33 0 .87.33 1.8.74 2.3a.3.3 0 01.07.28c-.08.3-.26.96-.3 1.1-.05.17-.16.2-.37.12-1.4-.65-2.27-2.73-2.27-4.4 0-3.59 2.6-6.89 7.5-6.89 3.93 0 6.96 2.82 6.96 6.6 0 3.94-2.49 7.12-5.95 7.12-1.16 0-2.24-.6-2.6-1.29l-.7 2.66c-.25.98-.93 2.2-1.38 2.95a9.996 9.996 0 004.13 1.02c5.48 0 9.94-4.46 9.94-9.94S17.48 2.04 12 2.04z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" title="Facebook" class="hover:text-[#d9cba3]">
+            <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M22.675 0h-21.35A1.325 1.325 0 000 1.325v21.351A1.325 1.325 0 001.325 24h11.494v-9.294H9.69v-3.622h3.129V8.413c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.621h-3.123V24h6.116A1.325 1.325 0 0024 22.675V1.325A1.325 1.325 0 0022.675 0z"/></svg>
+          </a>
+        </div>
+        <p class="text-xs">&copy; 2025 - 2026, MISO <br />All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
