@@ -1,5 +1,5 @@
 .body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Onesta, sans-serif;
 }
 hr {
     border: none;
@@ -10,9 +10,12 @@ hr {
     background-color: #C6AC8E;
     /* padding: 10px 20px; */
     /* border-bottom: 1px solid #eee; */
-    width: 100%;
+    /* width: 101%; */
+    width: 1538px;
     position: relative;
-    justify-self: center;
+    /* justify-self: center; */
+    right: 10px;
+    bottom: 10px;
 }
 .navbar {
     display: flex;
@@ -31,10 +34,11 @@ hr {
 .profil-info-box {
     display: flex;
     flex-direction: column;
+    /* align-items: start; */
     justify-content: center;
     padding-left: 40px;
     padding-right: 40px;
-    width: 1160px;
+    width: 1095px;
     background-color: #ffffff;
 }
 .profil-info-box h2 {
