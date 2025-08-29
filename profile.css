@@ -1,4 +1,4 @@
-.body {
+body {
     font-family: Onesta, sans-serif;
 }
 hr {
@@ -28,15 +28,18 @@ hr {
     display: flex;
     flex-direction: column;
     justify-self: center;
-    padding: 20px;
+    padding: 0px;
+    margin-bottom: 50px;
     width: 1160px;
 }
 .profil-info-box {
     display: flex;
     flex-direction: column;
     /* align-items: start; */
+    border-radius: 5px;
+    border: 1px solid #ccc;
     justify-content: center;
-    padding-left: 40px;
+    padding-left: 30px;
     padding-right: 40px;
     width: 1095px;
     background-color: #ffffff;
@@ -49,4 +52,17 @@ hr {
 .profil-info-box p {
     margin: 5px 0 15px;
     font-size: 14px;
+}
+#riwayat {
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    justify-content: center;
+    justify-self: center;
+    padding-left: 30px;
+    padding-right: 40px;
+    width: 1095px;
+    background-color: #ffffff;  
 }
