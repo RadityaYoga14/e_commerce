@@ -33,11 +33,24 @@ hr {
     background-color: #C6AC8E;
     height: 60px;
 }
+
+.navbar-logo-area {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.navbar-logo-img {
+    width: 150px;
+    height: 50px;
+    object-fit: contain;
+}
+
 #info-profil {
     display: flex;
     flex-direction: column;
     justify-self: center;
-    padding: 0px;
+    padding: 20px;
     margin-bottom: 50px;
     width: 1160px;
 }
@@ -50,6 +63,8 @@ hr {
     justify-content: center;
     padding-left: 30px;
     padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     width: 1095px;
     background-color: #ffffff;
 }
@@ -72,6 +87,8 @@ hr {
     justify-self: center;
     padding-left: 30px;
     padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 1095px;
     background-color: #ffffff;  
 }
