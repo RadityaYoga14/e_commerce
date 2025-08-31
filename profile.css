@@ -18,7 +18,7 @@ hr {
     background-color: #C6AC8E;
     width: 100%;
     position: relative;
-    height: 80px;
+    height: 90px;
 }
 .navbar {
     width: 100vw;
@@ -37,27 +37,29 @@ hr {
 
 .navbar-logo-img {
     width: 150px;
-    height: 50px;
+    height: 80px;
+    position: relative;
+    top: 15px;
     object-fit: contain;
 }
 .profile {
     display: flex;
     flex-direction: row;
-    margin: 0px 10px 0px 580px;
+    margin: 20px 10px 0px 580px;
     align-items: center;
     gap: 12px;
 }
 .love {
     display: flex;
     flex-direction: row;
-    margin: 0px 10px 0px 500px;
+    margin: 20px 10px 0px 500px;
     align-items: end;
     gap: 12px;
 }
 .keranjang {
     display: flex;
     flex-direction: row;
-    margin: 0px 10px 0px 20px;
+    margin: 20px 10px 0px 20px;
     align-items: end;
     gap: 12px;
 }
@@ -67,8 +69,13 @@ hr {
     justify-items: center;
     justify-content: space-between;
     margin-top: 70px;
-    padding: 20px 0px 20px 180px;
-    width: 1160px;
+    padding: 20px 0px 20px 300px;
+    width: 900px;
+}
+#info-profil p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
 }
 .profil-info-box {
     display: flex;
