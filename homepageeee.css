@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fdfdfd;
+}
+
+/* Navbar */
+.navbar {
+  background: #d2bda3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+
+.logo {
+  height: 40px;
+  object-fit: cover;
+}
+
+.search-container {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+
+.search-container input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.icon-search {
+  width: 20px;
+  height: 20px;
+  stroke: #666;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.kategori-btn {
+  background: white;
+  border: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: white;
+  cursor: pointer;
+}
+
+/* Banner */
+.banner-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  padding: 24px;
+}
+
+.banner-grid img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Brand Circle */
+.brand-circle {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.brand-circle p {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Judul */
+.judul {
+  text-align: center;
+  font-weight: bold;
+  margin: 16px 0;
+  font-size: 20px;
+}
+
+/* Kategori */
+.kategori-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+.kategori-icons div {
+  width: 80px;
+  height: 80px;
+  background: #e9ddcf;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Produk Section */
+.produk-section {
+  padding: 40px 60px;
+}
+
+.produk-section h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.produk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+.card .harga {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card .detail {
+  font-size: 12px;
+  color: gray;
+}
