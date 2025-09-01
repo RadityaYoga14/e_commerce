@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MISO Header</title>
+  <link rel="stylesheet" href="style.css">
+  <script link="script.js"></script>
+</head>
+
+<body>
+  <!-- Bar Diskon -->
+  <div class="top-bar">
+    <p>Get diskon up to 60%</p>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="logomiso.png" alt="MISO Logo">
+
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+      <a href="shop.html">Shop</a>
+      <a href="fashion.html">Fashion</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Cari produk, brand, merek.">
+      <button>🔍</button>
+    </div>
+
+    <!-- Icons kanan -->
+    <div class="icons">
+      <a href="wishlist.html">
+        <img src="wishlist.png" alt="Wishlist"> Wishlist
+      </a>
+      <a href="cart.html">
+        <img src="cart.png" alt="Cart"> Cart
+      </a>
+      <a href="user.html">
+        <img src="user.png" alt="User"> User
+      </a>
+    </div>
+    
+  </header>
+       
+    
+    <div class="container">
+        <div class="product-wrapper">
+            <div class="image-section">
+                <img id="mainImage" class="main-image" src= "Rectangle30.png">
+                <button class="nav-arrow prev" onclick="previousImage()">‹</button>
+                <button class="nav-arrow next" onclick="nextImage()">›</button>
+                <div class="thumbnail-container">
+                    <div class="thumbnail active" onclick="setMainImage(0)">
+                        <img src="Yellow2.png" alt="View 1">
+                    </div>
+                    <div class="thumbnail" onclick="setMainImage(1)">
+                        <img src= "white2.png" alt="View 2">
+                    </div>
+                </div>
+            </div>
+          
+            <div class="product-info">
+                <div class="rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">(5.0)</span>
+                </div>
+                
+                <div class="brand">ZARA - </div>
+                <h3 class="product-title">Kemeja kantoran wanita</h3>
+                
+                <div class="price">Rp. 799.000</div>
+                
+                <div class="shipping-info">
+                    <div class="shipping-item">Worldwide shipping available</div>
+                    <div class="shipping-item">Up to 30%</div>
+                </div>
+                
+                <div class="option-group">
+                    <div class="option-label">COLOR</div>
+                    <div class="color-options">
+                        <button class="color-option active" data-color="yellow" onclick="selectColor(this, 'yellow')">Yellow</button>
+                        <button class="color-option" data-color="white" onclick="selectColor(this, 'white')">White</button>
+                    </div>
+                </div>
+                
+                <div class="option-group">
+                    <div class="option-label">SIZE</div>
+                    <div class="size-options">
+                        <button class="size-option" data-size="s" onclick="selectSize(this, 'S')">S</button>
+                        <button class="size-option active" data-size="m" onclick="selectSize(this, 'M')">M</button>
+                        <button class="size-option" data-size="l" onclick="selectSize(this, 'L')">L</button>
+                    </div>
+                </div>
+                
+                <div class="option-group">
+                    <div class="option-label">QUANTITY</div>
+                    <div class="quantity-section">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                            <input type="number" class="quantity-input" id="quantity" value="1" min="1" readonly>
+                            <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn-primary" onclick="addToCart()">ADD TO CART</button>
+                    <button class="btn-secondary" onclick="buyNow()">BUY NOW</button>
+                    <button class="love-btn" id="loveBtn" onclick="toggleLove()">♡</button>
+                </div>
+                
+                <div class="description-section">
+                    <h3 class="section-title">Description</h3>
+                    <p class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    
+                    <h3 class="section-title">Details</h3>
+                    <p class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div> 
+     
+    <div class="success-message" id="successMessage">
+        Item berhasil ditambahkan ke keranjang!
+    </div>
+
+
+
+
+
+  </html>
