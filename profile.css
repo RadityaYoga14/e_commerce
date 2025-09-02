@@ -103,7 +103,7 @@ hr {
     margin: 5px 0 15px;
     font-size: 14px;
 }
-#riwayat {
+#riwayat  {
     display: flex;
     flex-direction: column;
     /* align-items: start; */
@@ -120,7 +120,13 @@ hr {
     width: 895px;
     background-color: #ffffff;
     box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.150);
+    text-decoration: none;
 }
+
+#riwayat a {
+    text-decoration: none;
+}
+
 footer {
     background: #C6AC8E;
     color: #fff;
