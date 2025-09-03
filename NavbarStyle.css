@@ -7,7 +7,8 @@ body, html {
   background: #C6AC8E;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  flex-direction: row;
   padding: 12px 24px;
   background-image: url("motif batik/BatikNavbar.png");
   background-size: cover;
@@ -24,7 +25,7 @@ body, html {
 .navbar-search {
   flex: 1;
   max-width: 600px;
-  margin: 0 20px;
+  margin: 0px 0px 0px 330px;
   display: flex;
   align-items: center;
   background: white;
@@ -50,6 +51,7 @@ body, html {
   display: flex;
   position: relative;
   align-items: center;
+  margin: 0px 0px 0px 250px;
   gap: 16px;
 }
 
@@ -98,7 +100,25 @@ body, html {
   height: 24px;
 }
 
+.navbar-icons1 {
+  position: relative;
+  bottom: 3px;
+  /* left: 15px; */
+  width: 30px;
+  height: 30px;
+  margin-left: 19px;
+}
+.navbar-icons2 {
+  position: relative;
+  bottom: 3px;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
 .navbar-icons-b {
-    width: 40px;
-    height: 40px;
+  position: relative;
+  top: 2px;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
 }
