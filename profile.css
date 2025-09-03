@@ -77,6 +77,11 @@ hr {
     font-weight: bold;
     margin: 0;
 }
+#info-profil a {
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5px 0px 0px 20px;
+}
 .profil-info-box {
     display: flex;
     flex-direction: column;
@@ -89,7 +94,7 @@ hr {
     padding-right: 40px;
     padding-top: 20px;
     padding-bottom: 10px; */
-    padding: 20px 40px 10px 30px;
+    padding: 40px 40px 30px 30px;
     width: 895px;
     background-color: #ffffff;
     box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.150);
@@ -103,7 +108,7 @@ hr {
     margin: 5px 0 15px;
     font-size: 14px;
 }
-#riwayat {
+#riwayat  {
     display: flex;
     flex-direction: column;
     /* align-items: start; */
@@ -116,11 +121,17 @@ hr {
     padding-top: 20px;
     padding-bottom: 20px; */
     margin-top: 50px;
-    padding: 20px 40px 20px 30px;
+    padding: 30px 40px 30px 30px;
     width: 895px;
     background-color: #ffffff;
     box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.150);
+    text-decoration: none;
 }
+
+#riwayat a {
+    text-decoration: none;
+}
+
 footer {
     background: #C6AC8E;
     color: #fff;
