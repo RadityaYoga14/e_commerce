@@ -1,310 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fdfdfd;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-/* Navbar */
-.navbar {
-  background: #d2bda3;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 24px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.logo {
-  height: 40px;
-  object-fit: cover;
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #d4a574, #c8a882);
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.nav-center {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 40px;
 }
 
 .search-container {
-  flex: 1;
-  max-width: 600px;
-  margin: 0 20px;
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 999px;
-  padding: 8px 12px;
+    position: relative;
+    display: flex;
 }
 
-.search-container input {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 14px;
+.search-input {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    font-size: 14px;
 }
 
-.icon-search {
-  width: 20px;
-  height: 20px;
-  stroke: #666;
+.search-btn {
+    padding: 10px 16px;
+    border: none;
+    background: white;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
-.kategori-btn {
-  background: white;
-  border: none;
-  border-radius: 999px;
-  padding: 6px 12px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  font-size: 14px;
+.category-dropdown {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background: white;
+    font-size: 14px;
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
-  stroke: white;
-  cursor: pointer;
+.nav-icons {
+    display: flex;
+    gap: 12px;
 }
 
-/* Banner */
-.banner-grid {
+.nav-icons .icon {
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+}
+
+/* Hero Section */
+.banner-section {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr; /* kiri lebih besar */
   gap: 16px;
   padding: 24px;
 }
 
-.banner-grid img {
-  width: 100%;
+.banner-left .banner-img {
   height: 450px;
+  border-radius: 16px; /* tinggi banner kiri */
+}
+
+.banner-right .banner-img {
+  height: 450px; /* tinggi banner kanan juga */
+  object-fit: cover; /* crop dikit tapi rapih */
+  border-radius: 16px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 350px;
   object-fit: cover;
-  border-radius: 12px;
-}
-
-.slider{
-  position: relative;
-  width: 100%;
-  margin: auto;
-  overflow: hidden;
-}
-
-.slider img{
-  width: 100%;
-  display: none;
-}
-
-img.displaySlide{
   display: block;
-  animation-name: fade;
-  animation-duration: 1.5s;
 }
 
-.slidder button{
+.banner-left .banner-img {
+  height: 450px; /* banner kiri lebih tinggi */
+}
+
+.banner-overlay {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  background-color: black;
+  inset: 0; /* full cover */
   color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.previous{
-  left: 0;
-}
-
-.next{
-  right: 0;
-}
-
-@keyframes fade {
-  from {opacity: .5}
-  to {opacity: 1}
-}
-
-/* Brand Circle */
-.brand-circle {
   display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.banner-overlay.left {
   justify-content: center;
-  gap: 24px;
-  margin: 24px 0;
+  align-items: flex-start;
+  text-align: left;
 }
 
-.circle {
-  width: 80px;
-  height: 80px;
-  background: #ccc;
-  border-radius: 50%;
-}
-
-.brand-circle p {
-  text-align: center;
-  margin-top: 8px;
-  font-size: 14px;
-}
-
-/* Judul */
-.judul {
-  text-align: center;
-  font-weight: bold;
-  margin: 16px 0;
-  font-size: 20px;
-}
-
-/* Kategori */
-.kategori-icons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  font-size: 28px;
-  margin-bottom: 32px;
-}
-
-.kategori-icons div {
-  width: 80px;
-  height: 80px;
-  background: #e9ddcf;
-  border-radius: 12px;
-  display: flex;
+.banner-overlay.right {
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-}
-
-/* Produk Section */
-.produk-section {
-  padding: 40px 60px;
-}
-
-.produk-section h2 {
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 32px;
 }
 
-.produk-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 24px;
-}
-
-.card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 16px;
-  transition: all 0.2s ease;
-}
-
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-
-.card h3 {
+/* Text styling */
+.small-text {
   font-size: 14px;
-  font-weight: 600;
-  margin: 6px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
 }
 
-.card .harga {
-  font-size: 16px;
+.title {
+  font-size: 48px;
   font-weight: bold;
+  margin: 0;
 }
 
-.card .detail {
+.subtitle {
+  font-size: 24px;
+  font-style: italic;
+  margin: 8px 0;
+}
+
+.desc {
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.title-small {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.desc-small {
   font-size: 12px;
-  color: gray;
+  margin-top: 8px;
 }
 
-footer {
-    background: #C6AC8E;
-    color: #fff;
-    margin-top: 48px;
-    padding-top: 32px;
-    background-image: url("motif batik/BatikFooter.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.footer-content {
+.side-card {
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                url('https://via.placeholder.com/300x240/e6d7c9/666666?text=MISO+IN+BALI') center/cover;
     display: flex;
-    z-index: 1;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 32px 32px 32px;
-    border-bottom: 1.5px solid #fff3;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-/*FOOTER LOGO*/
-
-.footer-logo-area {
-    display: flex;
-    gap: 12px;
+.side-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
     margin-bottom: 8px;
 }
 
-.footer-logo-img {
-    width: 250px;
-    height: 100px;
-    object-fit: contain;
+.side-content p {
+    font-size: 14px;
+    color: #666;
 }
 
-.footer-logo {
-    flex: 1 1 180px;
-    font-size: 2rem;
-    font-weight: bold;
+/* Brand Section */
+.brands {
+    padding: 40px 60px;
+}
+
+.brand-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.brand-item {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-right: 32px;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #d9d9d9;
+}
+
+.brand-item span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Category Section */
+.categories {
+    padding: 40px 60px;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 24px;
     margin-bottom: 24px;
+    color: #333;
 }
 
-.footer-link-social {
-    width: 1.9rem;
-    height: 1.9rem;
-    margin-right: 0.2rem;
-    margin-bottom: 0.5rem;
-}
-
-/*FOOTER LINKS*/
-
-.footer-links {
+.category-grid {
     display: flex;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    flex: 4 1 600px;
-    gap: 48px;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.footer-links h4 {
-    margin: 0 0 8px 0;
-    font-size: 1.3rem;
+.category-item {
+    width: 60px;
+    height: 60px;
+    background: #e6d7c9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.category-item:hover {
+    background: #d4a574;
+    transform: translateY(-2px);
+}
+
+/* Product Section - Using your provided CSS */
+.produk-section {
+    padding: 40px 60px;
+}
+
+.produk-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 16px;
+    transition: all 0.2s ease;
+
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 6px 0;
+}
+
+.card .harga {
+    font-size: 16px;
     font-weight: bold;
-    display: inline-block;
-    padding-bottom: 2px;
 }
 
-.footer-links ul {
+.card .detail {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #d4a574, #c8a882);
+    color: white;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.footer-section ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    line-height: 1.3rem;
 }
 
-.footer-links li {
-    margin-bottom: 6px;
-    font-size: 1rem;
-    font-weight: 400;
+.footer-section ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-section ul li:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.social-icons span {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.social-icons span:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.copyright {
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .brand-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .hero, .brands, .categories, .produk-section {
+        padding: 20px 20px;
+    }
+    
+    .footer-content {
+        padding: 0 20px;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .nav-center {
+        margin: 0 20px;
+    }
+    
+    /* Responsive untuk produk grid */
+    .produk-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+    .produk-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) and (min-width: 769px) {
+    .produk-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

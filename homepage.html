@@ -1,181 +1,211 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar Miso</title>
-  <link rel="stylesheet" href="homepageeee.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISO - Fashion Collection</title>
+    <link rel="stylesheet" href="homepageeee.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <!-- Logo -->
-    <div class="navbar-left">
-      <img src="Foto_&_Logo/Class_of (1).png" alt="Logo" class="logo">
-    </div>
-
-    <!-- Search -->
-    <div class="search-container">
-      <input type="text" placeholder="Cari produk">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon-search" viewBox="0 0 24 24" stroke="currentColor">
-        <path d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" 
-              fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-
-    <!-- Right -->
-    <div class="navbar-right">
-      <button class="kategori-btn">
-        Kategori
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon-menu" viewBox="0 0 24 24" stroke="currentColor">
-          <path d="M4 6h16M4 12h16M4 18h16" 
-                fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-
-      <!-- Icons -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor">
-        <path d="M4.318 6.318a4.5 4.5 0 016.364 0L12 
-        7.636l1.318-1.318a4.5 4.5 0 
-        116.364 6.364L12 21.364 4.318 
-        12.682a4.5 4.5 0 010-6.364z" 
-        fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor">
-        <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 
-        13l-1.293 2.707A1 1 0 007 
-        17h10a1 1 0 
-        00.894-1.447L17 13M7 13V6h13" 
-        fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor">
-        <path d="M5.121 17.804A7.967 7.967 0 
-        0112 15c2.21 0 4.21.896 5.657 
-        2.344M15 11a3 3 0 11-6 0 3 3 0 
-        016 0z" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-  </nav>
-
-  <!-- Banner -->
-  <div class="slider">
-    <div class="slides">
-      <img class="slide" src="Foto_&_Logo/bannerlarge1.jpg" alt="Banner 1">
-      <img class="slide" src="Foto_&_Logo/bannerlarge2.jpg" alt="Banner 2">
-      <img class="slide" src="Foto_&_Logo/bannerlarge3.jpg" alt="Banner 3">
-    </div>
-    <button class="prev" onclick="prevSlide()">&#10094</button>
-    <button class="next" onclick="nextSlide()">&#10095</button>
-
-  <!-- Brand Circle -->
-  <div class="brand-circle">
-    <div><div class="circle"></div><p>adidas</p></div>
-    <div><div class="circle"></div><p>ZARA</p></div>
-    <div><div class="circle"></div><p>erigo</p></div>
-    <div><div class="circle"></div><p>brand lokal</p></div>
-    <div><div class="circle"></div><p>brand luxury</p></div>
-  </div>
-
-  <!-- Judul -->
-  <h2 class="judul">Pilihan</h2>
-
-  <!-- Kategori -->
-  <div class="kategori-icons">
-    <div>👕</div>
-    <div>👔</div>
-    <div>👖</div>
-    <div>👗</div>
-    <div>🧕</div>
-    <div>👟</div>
-  </div>
-
-  <!-- Produk -->
-  <section class="produk-section">
-    <h2>Mungkin anda suka</h2>
-    <div class="produk-grid">
-      <!-- Card -->
-      <div class="card">
-        <img src="Foto_&_Logo/produk1.jpg" alt="Produk 1">
-        <h3>Callie Cotton X Hello Kitty</h3>
-        <p class="harga">Rp 860.000</p>
-        <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
-      </div>
-
-      <div class="card">
-        <img src="Foto_&_Logo/produk 2.webp" alt="Produk 2">
-        <h3>ZARA - Kemeja Wanita</h3>
-        <p class="harga">Rp 799.000</p>
-        <p class="detail">⭐ 4.2 | 10rb+ terjual</p>
-      </div>
-
-      <div class="card">
-        <img src="Foto_&_Logo/produk  3.avif" alt="Produk 3">
-        <h3>ADIDAS - Samba OG White Gum</h3>
-        <p class="harga">Rp 2.000.000</p>
-        <p class="detail">⭐ 4.8 | 10rb+ terjual</p>
-      </div>
-
-      <div class="card">
-        <img src="Foto_&_Logo/produk 4.webp" alt="Produk 4">
-        <h3>KIYANA - Jennie Skirt</h3>
-        <p class="harga">Rp 75.000</p>
-        <p class="detail">⭐ 4.8 | 2.8rb+ terjual</p>
-      </div>
-
-      <div class="card">
-        <img src="Foto_&_Logo/produk 5.webp" alt="Produk 5">
-        <h3>COLORBOX - Cargo Denim Pants Lt. Blue</h3>
-        <p class="harga">Rp 134.955</p>
-        <p class="detail">⭐ 5.0 | 5rb+ terjual</p>
-      </div>
-    </div>
-  </section>
-
-  <img src="Foto & Logo/banner 1.jpg">
-
-<footer> <!--Footer-->
-        <div class="footer-content"> <!--Semua konten footer.-->
-            <div class="footer-logo-area"> <!--AREA LOGO-->
-                <img src="Foto_&_Logo/logo_miso.png" class="footer-logo-img">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="https://via.placeholder.com/40x40/c8a882/ffffff?text=MISO" alt="MISO Logo">
+                </div>
             </div>
-            <div class="footer-links"> <!--Link-Link Footer-->
-                <div> <!--Kategori MISO-->
-                    <h4>MISO</h4>
-                    <ul>
-                        <li>Tentang MISO</li>
-                        <li>Hak Kekayaan Intelektual</li>
-                        <li>Syarat dan Ketentuan</li>
-                        <li>Kebijakan Privasi</li>
-                        <li>Sertifikat</li>
-                        <li>Blog</li>
-                    </ul>
+            <div class="nav-center">
+                <div class="search-container">
+                    <input type="text" placeholder="Cari produk" class="search-input">
+                    <button class="search-btn">🔍</button>
                 </div>
-                <div> <!--Kategori Pembelian & Penjualan-->
-                    <h4>PEMBELIAN</h4>
-                    <ul>
-                        <li>MISO Help Center</li>
-                        <li>Pelacakan Paket</li>
-                        <li>Pengembalian Produk</li>
-                    </ul> <br>
-                    <h4>PENJUALAN</h4>
-                    <ul>
-                        <li>MISO Brand Applications</li>
-                        <li>MISO Affiliate Program</li>
-                    </ul>
+            </div>
+            <div class="nav-right">
+                <select class="category-dropdown">
+                    <option>Kategori</option>
+                </select>
+                <div class="nav-icons">
+                    <span class="icon">♡</span>
+                    <span class="icon">🛒</span>
+                    <span class="icon">👤</span>
                 </div>
-                <div>
-                    <h4>IKUTI KAMI:</h4> <br>
-                    <img src="Foto_&_Logo/IGLogo.png" class="footer-link-social">
-                    <img src="Foto_&_Logo/TTLogo.png" class="footer-link-social">
-                    <img src="Foto_&_Logo/XLogo.png" class="footer-link-social">
-                    <img src="Foto_&_Logo/PinterestLogo.png" class="footer-link-social"> <br>
-                    <ul>
-                        <li>© 2025 - 2026, MISO</li>
-                        <li>All rights reserved.</li>
-                    </ul>
-                </div>
-            </div> <!--End link-link footer-->
-        </div> <!--End konten footer.-->
-</footer>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <!-- Banner Section -->
+<!-- Banner Section -->
+<section class="banner-section">
+  <!-- Banner besar kiri -->
+  <div class="banner-left">
+    <img src="Foto_&_Logo/bannerlarge1.jpg" alt="Banner 1" class="banner-img">
+  </div>
+
+  <!-- Banner kecil kanan -->
+  <div class="banner-right">
+    <img src="Foto_&_Logo/banner 2.jpg" alt="Banner 2" class="banner-img">
+  </div>
+</section>
+
+    <!-- Brand Section -->
+    <section class="brands">
+        <div class="brand-grid">
+            <div class="brand-item">
+                <div class="brand-circle"></div>
+                <span>adidas</span>
+            </div>
+            <div class="brand-item">
+                <div class="brand-circle"></div>
+                <span>ZARA</span>
+            </div>
+            <div class="brand-item">
+                <div class="brand-circle"></div>
+                <span>erigo</span>
+            </div>
+            <div class="brand-item">
+                <div class="brand-circle"></div>
+                <span>brand lokal</span>
+            </div>
+            <div class="brand-item">
+                <div class="brand-circle"></div>
+                <span>brand luxury</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="categories">
+        <h2>Pilihan</h2>
+        <div class="category-grid">
+            <div class="category-item">👕</div>
+            <div class="category-item">🧥</div>
+            <div class="category-item">👖</div>
+            <div class="category-item">👗</div>
+            <div class="category-item">👟</div>
+            <div class="category-item">👜</div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="produk-section">
+        <h2>Mungkin anda suka....</h2>
+        <div class="produk-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="Foto_&_Logo/produk1.jpg" alt="Callie Cotton X Hello Kitty">
+                <h3>Callie Cotton X Hello Kit...</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="Foto_&_Logo/produk 6.webp" alt="ZARA - Kemeja wanita">
+                <h3>ERIGO - T-Shirt Yahiko Unisex</h3>
+                <p class="harga">Rp 80.000</p>
+                <p class="detail">⭐ 4.9 | 713 terjual</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="Foto_&_Logo/produk  3.avif" alt="BRAND - COMING SOON">
+                <h3>adidas - Samba OG Shoes</h3>
+                <p class="harga">Rp 1.319.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="Foto_&_Logo/produk 4.webp" alt="BRAND - COMING SOON">
+                <h3>KIYANA BOUTIQUE - Layered Sk..</h3>
+                <p class="harga">Rp 190.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="Foto_&_Logo/produk 5.webp" alt="BRAND - COMING SOON">
+                <h3>COLORBOX - Cargo Denim Short..</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <!-- More cards -->
+            <div class="card">
+                <img src="https://via.placeholder.com/200x240/e6d7c9/666666?text=Coming+Soon" alt="BRAND - COMING SOON">
+                <h3>BRAND - COMING SOON</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/200x240/e6d7c9/666666?text=Coming+Soon" alt="BRAND - COMING SOON">
+                <h3>BRAND - COMING SOON</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/200x240/e6d7c9/666666?text=Coming+Soon" alt="BRAND - COMING SOON">
+                <h3>BRAND - COMING SOON</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/200x240/e6d7c9/666666?text=Coming+Soon" alt="BRAND - COMING SOON">
+                <h3>BRAND - COMING SOON</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/200x240/e6d7c9/666666?text=Coming+Soon" alt="BRAND - COMING SOON">
+                <h3>BRAND - COMING SOON</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/200x240/e6d7c9/666666?text=Coming+Soon" alt="1NAFU - COMING SOON">
+                <h3>1NAFU - COMING SOON</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/200x240/e6d7c9/666666?text=Coming+Soon" alt="BRAND - COMING SOON">
+                <h3>BRAND - COMING SOON</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/200x240/e6d7c9/666666?text=Coming+Soon" alt="BRAND - COMING SOON">
+                <h3>BRAND - COMING SOON</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/200x240/e6d7c9/666666?text=Coming+Soon" alt="BRAND - COMING SOON">
+                <h3>BRAND - COMING SOON</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/200x240/e6d7c9/666666?text=Coming+Soon" alt="BRAND - COMING SOON">
+                <h3>BRAND - COMING SOON</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
 </body>
 </html>
