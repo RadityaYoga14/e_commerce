@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Voucher</title>
+    <link rel="stylesheet" href="CSS/voucher.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar-bg">
+        <!--Logo-->
+        <div>
+            <img src="Foto_&_Logo/logo_miso.png" alt="Logo" class="navbar-logo">
+        </div>
+
+        <!--Searchbar-->
+        <div class="navbar-search">
+            <input type="text" placeholder="Carilah produk impianmu...">
+            <!--Ikon search-->
+            <svg xmlns="http://www.w3.org/2000/svg" class="navbar-icon-search" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" 
+                      fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <!--Kategori-->
+        <div class="navbar-kategori">
+            <button class="navbar-kategori-btn">
+                Kategori
+                <img src="Foto_&_Logo/KategoriIcon.png" class="navbar-icons">
+                <div class="navbar-kategori-dropdown">
+                    <a href="#" style="margin-top: 10px;">Kaos</a>
+                    <a href="#">Kemeja</a>
+                    <a href="#">Celana</a>
+                    <a href="#">Rok</a>
+                    <a href="#">Sepatu</a>
+                    <a href="#" style="margin-bottom: 10px;">Baju Muslim</a>
+                </div>
+            </button>
+        </div>
+        
+        <div class="icons">
+            <!-- Icons -->
+            <img src="Foto_&_Logo/CartIcon.png" class="navbar-icons1">
+            <img src="Foto_&_Logo/HeartIcon.png" class="navbar-icons2">
+            <img src="Foto_&_Logo/ProfileIcon.png" class="navbar-icons-b">
+        </div>
+    </nav>
+
+    <div class="voucher-container">
+        <!-- Input Voucher Section -->
+        <div class="voucher-input-section">
+            <div class="voucher-input-container">
+                <input type="text" class="voucher-input" placeholder="Masukan kode voucher" id="voucherInput">
+                <button class="voucher-submit-btn" onclick="applyVoucher()">Simpan</button>
+            </div>
+            <div class="message" id="message"></div>
+        </div>
+
+        <!-- Available Vouchers -->
+        <div class="voucher-cards-section">
+            <!-- Voucher Card 1 -->
+            <div class="voucher-card" id="voucher1">
+                <div class="voucher-discount">12% Off</div>
+                <div class="voucher-details">
+                    Min. belanja Rp850.000, maks. potongan Rp 110.000.
+                </div>
+                <div class="voucher-validity">Berlaku hingga 31 Oct 2025, 23.59. S&K</div>
+                <div class="voucher-terms">
+                    <span class="term-tag">Shopfree</span>
+                    <span class="term-tag">Produk tertentu</span>
+                </div>
+                <div class="voucher-description">
+                    Tambahkan Rp850.000 lagi untuk menggunakan voucher ini.
+                </div>
+                <div class="voucher-action">
+                    <button class="claim-btn" onclick="claimVoucher('voucher1', 'SAVE12OFF')">Klaim</button>
+                    <span class="voucher-code">SAVE12OFF</span>
+                </div>
+            </div>
+
+            <!-- Voucher Card 2 -->
+            <div class="voucher-card" id="voucher2">
+                <div class="voucher-discount">12% Off</div>
+                <div class="voucher-details">
+                    Min. belanja Rp850.000, maks. potongan Rp 110.000.
+                </div>
+                <div class="voucher-validity">Berlaku hingga 31 Oct 2025, 23.59. S&K</div>
+                <div class="voucher-terms">
+                    <span class="term-tag">Shopfree</span>
+                    <span class="term-tag">Produk tertentu</span>
+                </div>
+                <div class="voucher-description">
+                    Tambahkan Rp850.000 lagi untuk menggunakan voucher ini.
+                </div>
+                <div class="voucher-action">
+                    <button class="claim-btn" onclick="claimVoucher('voucher2', 'MEGA12OFF')">Klaim</button>
+                    <span class="voucher-code">MEGA12OFF</span>
+                </div>
+            </div>
+
+            <!-- Voucher Card 3 -->
+            <div class="voucher-card" id="voucher3">
+                <div class="voucher-discount">15% Off</div>
+                <div class="voucher-details">
+                    Min. belanja Rp1.200.000, maks. potongan Rp 150.000.
+                </div>
+                <div class="voucher-validity">Berlaku hingga 15 Nov 2025, 23.59. S&K</div>
+                <div class="voucher-terms">
+                    <span class="term-tag">Premium</span>
+                    <span class="term-tag">Semua produk</span>
+                </div>
+                <div class="voucher-description">
+                    Tambahkan Rp1.200.000 lagi untuk menggunakan voucher ini.
+                </div>
+                <div class="voucher-action">
+                    <button class="claim-btn" onclick="claimVoucher('voucher3', 'PREMIUM15')">Klaim</button>
+                    <span class="voucher-code">PREMIUM15</span>
+                </div>
+            </div>
+
+            <!-- Voucher Card 4 -->
+            <div class="voucher-card" id="voucher4">
+                <div class="voucher-discount">10% Off</div>
+                <div class="voucher-details">
+                    Min. belanja Rp500.000, maks. potongan Rp 75.000.
+                </div>
+                <div class="voucher-validity">Berlaku hingga 25 Oct 2025, 23.59. S&K</div>
+                <div class="voucher-terms">
+                    <span class="term-tag">Newbie</span>
+                    <span class="term-tag">First order</span>
+                </div>
+                <div class="voucher-description">
+                    Tambahkan Rp500.000 lagi untuk menggunakan voucher ini.
+                </div>
+                <div class="voucher-action">
+                    <button class="claim-btn" onclick="claimVoucher('voucher4', 'WELCOME10')">Klaim</button>
+                    <span class="voucher-code">WELCOME10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <img src="Foto & Logo/banner 1.jpg">
+
+<footer> <!--Footer-->
+        <div class="footer-content"> <!--Semua konten footer.-->
+            <div class="footer-logo-area"> <!--AREA LOGO-->
+                <img src="Foto_&_Logo/logo_miso.png" class="footer-logo-img">
+            </div>
+            <div class="footer-links"> <!--Link-Link Footer-->
+                <div> <!--Kategori MISO-->
+                    <h4>MISO</h4>
+                    <ul>
+                        <li>Tentang MISO</li>
+                        <li>Hak Kekayaan Intelektual</li>
+                        <li>Syarat dan Ketentuan</li>
+                        <li>Kebijakan Privasi</li>
+                        <li>Sertifikat</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+                <div> <!--Kategori Pembelian & Penjualan-->
+                    <h4>PEMBELIAN</h4>
+                    <ul>
+                        <li>MISO Help Center</li>
+                        <li>Pelacakan Paket</li>
+                        <li>Pengembalian Produk</li>
+                    </ul> <br>
+                    <h4>PENJUALAN</h4>
+                    <ul>
+                        <li>MISO Brand Applications</li>
+                        <li>MISO Affiliate Program</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>IKUTI KAMI:</h4> <br>
+                    <img src="Foto_&_Logo/IGLogo.png" class="footer-link-social">
+                    <img src="Foto_&_Logo/TTLogo.png" class="footer-link-social">
+                    <img src="Foto_&_Logo/XLogo.png" class="footer-link-social">
+                    <img src="Foto_&_Logo/PinterestLogo.png" class="footer-link-social"> <br>
+                    <ul>
+                        <li>© 2025 - 2026, MISO</li>
+                        <li>All rights reserved.</li>
+                    </ul>
+                </div>
+            </div> <!--End link-link footer-->
+        </div> <!--End konten footer.-->
+</footer>
+
+    <script src="voucher.js"></script>
+</body>

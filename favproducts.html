@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fav Products</title>
+    <link rel="stylesheet" href="CSS/favproducts.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar-bg">
+        <!--Logo-->
+        <div>
+            <img src="Foto_&_Logo/logo_miso.png" alt="Logo" class="navbar-logo">
+        </div>
+
+        <!--Searchbar-->
+        <div class="navbar-search">
+            <input type="text" placeholder="Carilah produk impianmu...">
+            <!--Ikon search-->
+            <svg xmlns="http://www.w3.org/2000/svg" class="navbar-icon-search" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" 
+                      fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <!--Kategori-->
+        <div class="navbar-kategori">
+            <button class="navbar-kategori-btn">
+                Kategori
+                <img src="Foto_&_Logo/KategoriIcon.png" class="navbar-icons">
+                <div class="navbar-kategori-dropdown">
+                    <a href="#" style="margin-top: 10px;">Kaos</a>
+                    <a href="#">Kemeja</a>
+                    <a href="#">Celana</a>
+                    <a href="#">Rok</a>
+                    <a href="#">Sepatu</a>
+                    <a href="#" style="margin-bottom: 10px;">Baju Muslim</a>
+                </div>
+            </button>
+        </div>
+        
+        <div class="icons">
+            <!-- Icons -->
+            <img src="Foto_&_Logo/CartIcon.png" class="navbar-icons1">
+            <img src="Foto_&_Logo/HeartIcon.png" class="navbar-icons2">
+            <img src="Foto_&_Logo/ProfileIcon.png" class="navbar-icons-b">
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <section class="produk-section">
+        <h2>Produk Favorit</h2>
+        <div class="produk-grid">
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Foto_&_Logo/produk1.jpg" alt="Callie Cotton X Hello Kitty">
+                    <div class="heart-icon liked" onclick="toggleLike(this)">♥</div>
+                </div>
+                <h3>Callie Cotton X Hello Kitty Anniv...</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Foto_&_Logo/produk 6.webp" alt="Product 2">
+                    <div class="heart-icon unliked" onclick="toggleLike(this)">♥</div>
+                </div>
+                <h3>ERIGO - T-Shirt Yahiko Unisex</h3>
+                <p class="harga">Rp 80.000</p>
+                <p class="detail">⭐ 4.9 | 713 terjual</p>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Foto_&_Logo/produk  3.avif" alt="Callie Cotton X Hello Kitty">
+                    <div class="heart-icon liked" onclick="toggleLike(this)">♥</div>
+                </div>
+                <h3>adidas - Samba OG Shoes</h3>
+                <p class="harga">Rp 1.319.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Foto_&_Logo/produk 4.webp" alt="Product 2">
+                    <div class="heart-icon unliked" onclick="toggleLike(this)">♥</div>
+                </div>
+                <h3>KIYANA BOUTIQUE - Layered Sk..</h3>
+                <p class="harga">Rp 190.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Foto_&_Logo/produk 5.webp" alt="Callie Cotton X Hello Kitty">
+                    <div class="heart-icon liked" onclick="toggleLike(this)">♥</div>
+                </div>
+                <h3>COLORBOX - Cargo Denim Short..</h3>
+                <p class="harga">Rp 860.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="Foto_&_Logo/produk 7.webp" alt="Product 2">
+                    <div class="heart-icon unliked" onclick="toggleLike(this)">♥</div>
+                </div>
+                <h3>Hush Puppies - Outwear 955 Bar..</h3>
+                <p class="harga">Rp 599.000</p>
+                <p class="detail">⭐ 4.6 | 10rb+ terjual</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleLike(heartElement) {
+            // Add animation class
+            heartElement.classList.add('animate');
+            
+            // Toggle between liked and unliked states
+            if (heartElement.classList.contains('liked')) {
+                heartElement.classList.remove('liked');
+                heartElement.classList.add('unliked');
+                console.log('Product unliked!');
+            } else {
+                heartElement.classList.remove('unliked');
+                heartElement.classList.add('liked');
+                console.log('Product liked!');
+            }
+            
+            // Remove animation class after animation completes
+            setTimeout(() => {
+                heartElement.classList.remove('animate');
+            }, 300);
+        }
+    </script>
+  
+   <!-- Footer -->
+    <img src="Foto & Logo/banner 1.jpg">
+
+<footer> <!--Footer-->
+        <div class="footer-content"> <!--Semua konten footer.-->
+            <div class="footer-logo-area"> <!--AREA LOGO-->
+                <img src="Foto_&_Logo/logo_miso.png" class="footer-logo-img">
+            </div>
+            <div class="footer-links"> <!--Link-Link Footer-->
+                <div> <!--Kategori MISO-->
+                    <h4>MISO</h4>
+                    <ul>
+                        <li>Tentang MISO</li>
+                        <li>Hak Kekayaan Intelektual</li>
+                        <li>Syarat dan Ketentuan</li>
+                        <li>Kebijakan Privasi</li>
+                        <li>Sertifikat</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+                <div> <!--Kategori Pembelian & Penjualan-->
+                    <h4>PEMBELIAN</h4>
+                    <ul>
+                        <li>MISO Help Center</li>
+                        <li>Pelacakan Paket</li>
+                        <li>Pengembalian Produk</li>
+                    </ul> <br>
+                    <h4>PENJUALAN</h4>
+                    <ul>
+                        <li>MISO Brand Applications</li>
+                        <li>MISO Affiliate Program</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>IKUTI KAMI:</h4> <br>
+                    <img src="Foto_&_Logo/IGLogo.png" class="footer-link-social">
+                    <img src="Foto_&_Logo/TTLogo.png" class="footer-link-social">
+                    <img src="Foto_&_Logo/XLogo.png" class="footer-link-social">
+                    <img src="Foto_&_Logo/PinterestLogo.png" class="footer-link-social"> <br>
+                    <ul>
+                        <li>© 2025 - 2026, MISO</li>
+                        <li>All rights reserved.</li>
+                    </ul>
+                </div>
+            </div> <!--End link-link footer-->
+        </div> <!--End konten footer.-->
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+body, html {
+    margin: 0;
+}
+
+/*BACKGROUND*/
+.navbar-bg {
+  background: #C6AC8E;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex-direction: row;
+  padding: 12px 24px;
+  background-image: url("motif batik/BatikNavbar.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*MISO LOGO*/
+.navbar-logo {
+  height: 2.7rem;
+}
+
+/*SEARCHBAR*/
+.navbar-search {
+  flex: 1;
+  max-width: 600px;
+  margin: 0px 0px 0px 330px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  padding: 8px 12px;
+}
+
+.navbar-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.navbar-icon-search {
+  width: 20px;
+  height: 20px;
+  stroke: #666;
+}
+
+/*KATEGORI + DROPDOWN*/
+.navbar-kategori {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 0px 0px 0px 250px;
+  gap: 16px;
+}
+
+.navbar-kategori-btn {
+  background: white;
+  border: none;
+  border-radius: 16px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.navbar-kategori-dropdown  {
+  display: none;
+  position: absolute;
+  background-color: #fbfbfb;
+  border-radius: 7px;
+  min-width: 160px;
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.1);
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.navbar-kategori-dropdown a {
+  color: black;
+  padding: 9px 16px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.navbar-kategori-dropdown a:hover {background-color: #ddd;}
+
+.navbar-kategori:hover .navbar-kategori-dropdown {display: block;}
+
+.navbar-kategori:hover .navbar-kategori-btn {background-color: #f1f1f1;}
+
+/*IKON LAINNYA*/
+.navbar-icons {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar-icons1 {
+  position: relative;
+  bottom: 3px;
+  /* left: 15px; */
+  width: 30px;
+  height: 30px;
+  margin-left: 19px;
+}
+.navbar-icons2 {
+  position: relative;
+  bottom: 3px;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
+.navbar-icons-b {
+  position: relative;
+  top: 2px;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+}
