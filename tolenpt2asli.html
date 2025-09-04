@@ -6,15 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MISO Header</title>
   <link rel="stylesheet" href="style.css">
-  <script link="script.js"></script>
+  <script src="script.js"></script>
 </head>
 
 <body>
   <!-- Bar Diskon -->
   <div class="top-bar">
-    <p>Get diskon up to 60%</p>
+    <marquee width="60%" direction="left" height="20px" >
+   Road to 9.9 Sale Up to 75% + Voucher Up to 35% + Tumpuk Up to 8% ⭐ Road to 9.9 Sale Up to 75% + Voucher Up to 35% + Tumpuk Up to 8%
+   </marquee>
   </div>
-
+ 
   <!-- Header -->
   <header class="header">
     <!-- Logo -->
@@ -50,25 +52,41 @@
     </div>
     
   </header>
-       
+<!-- Main Content -->
+<main class="main-content">
+    <!-- Konten utama halaman -->
     
-    <div class="container">
-        <div class="product-wrapper">
-            <div class="image-section">
-                <img id="mainImage" class="main-image" src= "Rectangle30.png">
-                <button class="nav-arrow prev" onclick="previousImage()">‹</button>
+    <!-- Product Images -->
+    <section class="product-images">
+        <!-- Bagian gambar produk -->
+        <img src="Rectangle30.png" width="500" height="500" 
+             alt="product picture" class="main-image">
+              <button class="nav-arrow prev" onclick="previousImage()">‹</button>
                 <button class="nav-arrow next" onclick="nextImage()">›</button>
-                <div class="thumbnail-container">
-                    <div class="thumbnail active" onclick="setMainImage(0)">
-                        <img src="Yellow2.png" alt="View 1">
-                    </div>
-                    <div class="thumbnail" onclick="setMainImage(1)">
-                        <img src= "white2.png" alt="View 2">
-                    </div>
-                </div>
+        <!-- Gambar utama produk berupa SVG inline dengan teks dan bentuk -->
+        
+        <div class="thumbnail-grid">
+            <!-- Grid thumbnail kecil -->
+            <div class="thumbnail">
+                <img src="Yellow2.png" alt="Thumbnail 1">
+                <!-- Thumbnail 1 dengan warna latar #f8d7da -->
             </div>
-          
-            <div class="product-info">
+            <div class="thumbnail">
+                <img src="white2.png" alt="Thumbnail 2">
+                <!-- Thumbnail 2 dengan warna latar #e2d1f3 -->
+            </div>
+            <div class="thumbnail">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><rect width='80' height='80' fill='%23fce4ec' rx='10'/></svg>" alt="Thumbnail 3">
+                <!-- Thumbnail 3 dengan warna latar #fce4ec -->
+            </div>
+            <div class="thumbnail">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><rect width='80' height='80' fill='%23d1ecf1' rx='10'/></svg>" alt="Thumbnail 4">
+                <!-- Thumbnail 4 dengan warna latar #d1ecf1 -->
+            </div>
+        </div>
+    </section>
+
+          <section class="product-info">
                 <div class="rating">
                     <span class="stars">★★★★★</span>
                     <span class="rating-text">(5.0)</span>
@@ -133,13 +151,26 @@
         </div>
     </div>
      </div> 
-     
-    <div class="success-message" id="successMessage">
-        Item berhasil ditambahkan ke keranjang!
-    </div>
+     </section>
+     </main>
 
+         <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="reviews-container">
+            <!-- Header dengan Overall Rating -->
+            <div class="reviews-header">
+                <h3>Excellent</h3>
+                <div class="trustpilot-info">
+                    <div class="stars-header">★★★★★</div>
+                    <p>Rated <strong>4.3 / 5</strong> based on <strong>11,586 reviews</strong> on ⭐ Trustpilot</p>
+                </div>
+            </div>
 
-
-
-
-  </html>
+            <!-- Reviews Grid -->
+            <div class="reviews-grid" id="reviewsGrid">
+                <!-- Reviews akan di-generate oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+    </body>
+    </html>
