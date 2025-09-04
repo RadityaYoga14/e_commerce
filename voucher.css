@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/*BACKGROUND*/
+.navbar-bg {
+  background: #C6AC8E;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex-direction: row;
+  padding: 12px 24px;
+  background-image: url("motif batik/BatikNavbar.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*MISO LOGO*/
+.navbar-logo {
+  height: 2.7rem;
+}
+
+/*SEARCHBAR*/
+.navbar-search {
+  flex: 1;
+  max-width: 600px;
+  margin: 0px 0px 0px 330px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  padding: 8px 12px;
+}
+
+.navbar-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.navbar-icon-search {
+  width: 20px;
+  height: 20px;
+  stroke: #666;
+}
+
+/*KATEGORI + DROPDOWN*/
+.navbar-kategori {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 0px 0px 0px 250px;
+  gap: 16px;
+}
+
+.navbar-kategori-btn {
+  background: white;
+  border: none;
+  border-radius: 16px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.navbar-kategori-dropdown  {
+  display: none;
+  position: absolute;
+  background-color: #fbfbfb;
+  border-radius: 7px;
+  min-width: 160px;
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.1);
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.navbar-kategori-dropdown a {
+  color: black;
+  padding: 9px 16px;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.navbar-kategori-dropdown a:hover {background-color: #ddd;}
+
+.navbar-kategori:hover .navbar-kategori-dropdown {display: block;}
+
+.navbar-kategori:hover .navbar-kategori-btn {background-color: #f1f1f1;}
+
+/*IKON LAINNYA*/
+.navbar-icons {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar-icons1 {
+  position: relative;
+  bottom: 3px;
+  /* left: 15px; */
+  width: 30px;
+  height: 30px;
+  margin-left: 19px;
+}
+.navbar-icons2 {
+  position: relative;
+  bottom: 3px;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
+.navbar-icons-b {
+  position: relative;
+  top: 2px;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+
+.voucher-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* ===== INPUT VOUCHER SECTION ===== */
+.voucher-input-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.voucher-input-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.voucher-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.voucher-input:focus {
+    border-color: #007bff;
+}
+
+.voucher-input::placeholder {
+    color: #999;
+}
+
+.voucher-submit-btn {
+    padding: 12px 24px;
+    background-color: #6c5548;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.voucher-submit-btn:hover {
+    background-color: #5a4640;
+}
+
+/* ===== SUCCESS/ERROR MESSAGES ===== */
+.message {
+    text-align: center;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 16px 0;
+    display: none;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ===== VOUCHER CARDS SECTION ===== */
+.voucher-cards-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.voucher-card {
+    background: linear-gradient(135deg, #f8f6f0 0%, #ede7db 100%);
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+    border: 1px solid #e8e0d6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.voucher-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.voucher-discount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d4621a;
+    margin-bottom: 8px;
+}
+
+.voucher-details {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.voucher-validity {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.voucher-terms {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.term-tag {
+    background-color: rgba(212, 98, 26, 0.1);
+    color: #d4621a;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.voucher-description {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.voucher-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.claim-btn {
+    background-color: #d4621a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.claim-btn:hover {
+    background-color: #b8561a;
+    transform: translateY(-1px);
+}
+
+.claim-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.voucher-code {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #888;
+    background-color: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* ===== CLAIMED STATE ===== */
+.voucher-card.claimed {
+    opacity: 0.6;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+}
+
+.voucher-card.claimed .claim-btn {
+    background-color: #28a745;
+    cursor: default;
+}
+
+/* ===== ANIMATION ===== */
+.claim-btn.animate {
+    animation: buttonPulse 0.3s ease;
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    
+    .voucher-input-container {
+        flex-direction: column;
+    }
+    
+    .voucher-cards-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .voucher-terms {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1024px) {
+    .voucher-cards-section {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+}
