@@ -119,3 +119,5 @@ let currentImageIndex = 0;
                 quantity = 1;
             }
         });
+
+        

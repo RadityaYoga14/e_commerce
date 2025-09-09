@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MISO Header</title>
+  <link rel="stylesheet" href="CSS/styleee.css">
+  <script src="product.js"></script>
+</head>
+
+<body>
+  <!-- Bar Diskon -->
+  <div class="top-bar">
+    <marquee width="60%" direction="left" height="20px" >
+   Road to 9.9 Sale Up to 75% + Voucher Up to 35% + Tumpuk Up to 8% ⭐ Road to 9.9 Sale Up to 75% + Voucher Up to 35% + Tumpuk Up to 8%
+   </marquee>
+  </div>
+ 
+  <!-- Header -->
+  <header class="header">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="logomiso.png" alt="MISO Logo">
+
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+      <a href="shop.html">Shop</a>
+      <a href="fashion.html">Fashion</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Cari produk, brand, merek.">
+      <button>🔍</button>
+    </div>
+
+    <!-- Icons kanan -->
+    <div class="icons">
+      <a href="wishlist.html">
+        <img src="wishlist.png" alt="Wishlist"> Wishlist
+      </a>
+      <a href="cart.html">
+        <img src="cart.png" alt="Cart"> Cart
+      </a>
+      <a href="user.html">
+        <img src="user.png" alt="User"> User
+      </a>
+    </div>
+    
+  </header>
+<!-- Main Content -->
+<main class="main-content">
+    <!-- Konten utama halaman -->
+    
+    <!-- Product Images -->
+    <section class="product-images">
+        <!-- Bagian gambar produk -->
+        <img src="Rectangle30.png" width="500" height="500" 
+             alt="product picture" class="main-image">
+              <button class="nav-arrow prev" onclick="previousImage()">‹</button>
+                <button class="nav-arrow next" onclick="nextImage()">›</button>
+        <!-- Gambar utama produk berupa SVG inline dengan teks dan bentuk -->
+        
+        <div class="thumbnail-grid">
+            <!-- Grid thumbnail kecil -->
+            <div class="thumbnail">
+                <img src="Yellow2.png" alt="Thumbnail 1">
+                <!-- Thumbnail 1 dengan warna latar #f8d7da -->
+            </div>
+            <div class="thumbnail">
+                <img src="white2.png" alt="Thumbnail 2">
+                <!-- Thumbnail 2 dengan warna latar #e2d1f3 -->
+            </div>
+            <div class="thumbnail">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><rect width='80' height='80' fill='%23fce4ec' rx='10'/></svg>" alt="Thumbnail 3">
+                <!-- Thumbnail 3 dengan warna latar #fce4ec -->
+            </div>
+            <div class="thumbnail">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><rect width='80' height='80' fill='%23d1ecf1' rx='10'/></svg>" alt="Thumbnail 4">
+                <!-- Thumbnail 4 dengan warna latar #d1ecf1 -->
+            </div>
+        </div>
+    </section>
+
+          <section class="product-info">
+                <div class="rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">(5.0)</span>
+                </div>
+                
+                <div class="brand">ZARA - </div>
+                <h3 class="product-title">Kemeja kantoran wanita</h3>
+                
+                <div class="price">Rp. 799.000</div>
+                
+                <div class="shipping-info">
+                    <div class="shipping-item">Worldwide shipping available</div>
+                    <div class="shipping-item">Up to 30%</div>
+                </div>
+                
+                <div class="option-group">
+                    <div class="option-label">COLOR</div>
+                    <div class="color-options">
+                        <button class="color-option active" data-color="yellow" onclick="selectColor(this, 'yellow')">Yellow</button>
+                        <button class="color-option" data-color="white" onclick="selectColor(this, 'white')">White</button>
+                    </div>
+                </div>
+                
+                <div class="option-group">
+                    <div class="option-label">SIZE</div>
+                    <div class="size-options">
+                        <button class="size-option" data-size="s" onclick="selectSize(this, 'S')">S</button>
+                        <button class="size-option active" data-size="m" onclick="selectSize(this, 'M')">M</button>
+                        <button class="size-option" data-size="l" onclick="selectSize(this, 'L')">L</button>
+                    </div>
+                </div>
+                
+                <div class="option-group">
+                    <div class="option-label">QUANTITY</div>
+                    <div class="quantity-section">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                            <input type="number" class="quantity-input" id="quantity" value="1" min="1" readonly>
+                            <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn-primary" onclick="addToCart()">ADD TO CART</button>
+                    <button class="btn-secondary" onclick="buyNow()">BUY NOW</button>
+                    <button class="love-btn" id="loveBtn" onclick="toggleLove()">♡</button>
+                </div>
+                
+                <div class="description-section">
+                    <h3 class="section-title">Description</h3>
+                    <p class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    
+                    <h3 class="section-title">Details</h3>
+                    <p class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div> 
+     </section>
+     </main>
+
+    <section class="reviews-section">
+        <div class="reviews-container">
+            <!-- Header dengan Overall Rating -->
+            <div class="reviews-header">
+                <h3>Excellent</h3>
+                <div class="trustpilot-info">
+                    <div class="stars-header">★★★★★</div>
+                    <p>Rated <strong>4.3 / 5</strong> based on <strong>11,586 reviews</strong> on ⭐ Trustpilot</p>
+                </div>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="reviews-grid" id="reviewsGrid">
+                <!-- Sample Review Cards -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">John Doe</div>
+                            <div class="review-time">2 days ago</div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-title">Amazing service and quality!</div>
+                    <div class="review-content">The coffee exceeded my expectations. Will definitely order again. Highly recommend to coffee lovers everywhere...</div>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Jane Smith</div>
+                            <div class="review-time">1 day ago</div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-title">Fast delivery and great packaging</div>
+                    <div class="review-content">Your service caught my eye. My orders are gifts so can't give feedback on coffee quality, but the communication was excellent...</div>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Mike Johnson</div>
+                            <div class="review-time">3 hours ago</div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-title">Good quality coffee</div>
+                    <div class="review-content">The coffee quality is really good and the flavor is rich. Delivery was fast and packaging was secure. Would recommend...</div>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Sarah Wilson</div>
+                            <div class="review-time">5 hours ago</div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-title">Exceptional customer service</div>
+                    <div class="review-content">Customer service is without fault, they're very approachable, quick to respond & polite. Great experience overall...</div>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">David Brown</div>
+                            <div class="review-time">1 week ago</div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-title">Perfect upgrade choice</div>
+                    <div class="review-content">Upgraded to the premium blend and it's fantastic. Coffee is hotter, stronger and generally much better quality than before...</div>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Lisa Anderson</div>
+                            <div class="review-time">2 weeks ago</div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-title">Great company to deal with</div>
+                    <div class="review-content">Great coffee and a company that is great to deal with. My orders are gifts so can't give feedback on coffee quality, but service is excellent...</div>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+    </html>
