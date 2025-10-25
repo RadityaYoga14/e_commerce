@@ -42,46 +42,45 @@ body {
 
 .nav-links {
   display: flex;
-   
   margin-top: 0;
   gap: 20px; 
 }
 
 .nav-links a {
   text-decoration: none ;
-  font-size: 20 ;
+  font-size: 18px ;
   color: white;        
   font-weight: bold;
   transition: 0.2s;
 }
 
 .nav-links a:hover {
-  color: #4C3932;         /* efek hover */
+  color: #493f3c;         /* efek hover */
 }
 
-/* Search bar */
-.search-bar {
+/*SEARCHBAR*/
+.navbar-search {
   flex: 1;
   max-width: 500px;
-  position: relative;
-  top: -10px ;
   margin: 0 200px 0 70px;
   display: flex;
-}
-
-.search-bar input {
-  flex: 1;
-  padding: 8px 10px;
-  border: none;
-  border-radius: 4px 0 0 4px;
-}
-
-.search-bar button {
-  padding: 8px 12px;
-  border: none;
+  align-items: center;
   background: white;
-  cursor: pointer;
-  border-radius: 0 4px 4px 0;
+  border-radius: 15px;
+  padding: 8px 12px;
+}
+
+.navbar-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.navbar-icon-search {
+  width: 20px;
+  height: 20px;
+  stroke: #666;
 }
 
 .icons a {
@@ -95,9 +94,10 @@ body {
 }
 
 .icons img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px; /* jarak antara icon dan teks */
+  width: 30px;
+  height: 30px;
+  margin-right: 10px; /* jarak antara icon dan teks */
+  margin-left: 10px ;
 }
 
 .nav-arrow {
@@ -164,6 +164,15 @@ body {
     background: white; /* Background putih */
     padding: 20px; /* Padding 20px */
 }
+ 
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Layout kolom di layar kecil */
+        margin: 20px; /* Margin 20px */
+        gap: 30px; /* Jarak antar elemen 30px */
+        padding: 20px; /* Padding 20px */
+    }
+}
 
 .main-image:hover {
     transform: scale(1.02); /* Zoom sedikit saat hover */
@@ -171,9 +180,15 @@ body {
 
 .thumbnail-grid {
     display: grid; /* Grid layout */
-    grid-template-columns: repeat(4, 1fr); /* 5 kolom dengan lebar sama */
-    gap: 10px; /* Jarak antar grid 10px */
-    margin-top: 20px; /* Margin atas 20px */
+    grid-template-columns: repeat(2, 1fr); /* 5 kolom dengan lebar sama */
+    gap: 15px; /* Jarak antar grid 10px */
+    width: 60%;
+    height:auto;
+    margin-left: 110px;
+    margin-right: 350px;
+    margin-bottom: 15px;
+    margin-top: 15px; /* Margin atas 20px */
+    
 }
 
 .thumbnail {
@@ -437,234 +452,425 @@ body {
     box-sizing: border-box;
 }
 
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+ 
 
-.reviews-section {
-    max-width: 1200px;
-    margin: 0 auto;
+        /* Reviews Section - HILANGKAN MAX-WIDTH DAN MARGIN AUTO */
+        .reviews-section {
+            width: 100%; /* Full width, bukan max-width */
+            margin: 0; /* Hilangkan margin auto */
+            background: #EAE0D5;
+        }
+
+        .reviews-container {
+            width: 100%; /* Full width */
+            background: #EAE0D5;
+            padding: 0; /* Hilangkan padding */
+            border-radius: 0; /* Hilangkan border radius */
+            overflow: hidden;
+            box-shadow: none; /* Hilangkan shadow */
+        }
+
+        /* Header Styling */
+        .reviews-header {
+            background: #EAE0D5;
+            padding: 40px 20px; /* Kurangi padding samping */
+            text-align: center;
+            border-bottom: 1px solid #f1f5f9;
+            width: 100%;
+        }
+
+        .reviews-header h3 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #4C3932;
+            margin-bottom: 15px;
+        }
+
+        .stars-header {
+            font-size: 32px;
+            color: #FFAE00;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .trustpilot-info p {
+            font-size: 16px;
+            color: #5A4841;
+            font-weight: 400;
+        }
+
+        .trustpilot-info strong {
+            color: #4C3932;
+            font-weight: 600;
+        }
+
+        /* Reviews Grid - FULL WIDTH TANPA MARGIN */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 10px; /* Hilangkan gap untuk seamless layout */
+            background: #EAE0D5;
+            margin: 0; /* Hilangkan margin */
+            padding: 0; /* Hilangkan padding */
+            max-height: 600px;
+            overflow-y: auto;
+            width: 100%; /* Pastikan full width */
+        }
+
+        /* Individual Review Card */
+        .review-card {
+            background: white;
+            padding: 25px;
+            margin: 0; /* Hilangkan margin */
+            position: relative;
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9; /* Border sebagai pemisah */
+            border-radius: 0; /* Hilangkan border radius */
+        }
+
+        .review-card:hover {
+            background: #fafafa;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        /* Review Header */
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .reviewer-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .reviewer-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #4C3932;
+            margin-bottom: 4px;
+        }
+
+        .review-time {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        /* Rating Stars */
+        .review-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stars {
+            font-size: 16px;
+            display: flex;
+            gap: 1px;
+        }
+
+        .star {
+            color: #e2e8f0;
+            transition: color 0.2s ease;
+        }
+
+        .star.filled {
+            color: #FFAE00;
+        }
+
+        .rating-number {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        /* Review Content */
+        .review-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .review-content {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Read More Button */
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: #3b82f6;
+            font-size: 13px;
+            cursor: pointer;
+            text-decoration: underline;
+            padding: 0;
+            margin-top: 5px;
+        }
+
+        .read-more-btn:hover {
+            color: #1d4ed8;
+        }
+
+        /* Custom Scrollbar */
+        .reviews-grid::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .reviews-grid::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        .reviews-grid::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .reviews-grid::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Product Section - Using your provided CSS */
+.produk-section {
+    padding: 40px 60px;
 }
 
-.reviews-container {
+.produk-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+
+.card {
     background: white;
     border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 16px;
+    transition: all 0.2s ease;
+
 }
 
-/* Header Styling */
-.reviews-header {
-    background: #EAE0D5;
-    padding: 40px 30px;
-    text-align: center;
-    border-bottom: 1px solid #f1f5f9;
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.reviews-header h3 {
-    font-size: 36px;
-    font-weight: 700;
-    color: #4C3932;
-    margin-bottom: 15px;
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
 }
 
-.stars-header {
-    font-size: 32px;
-    color: #FFAE00;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
-
-.trustpilot-info p {
-    font-size: 16px;
-    color: #5A4841;
-    font-weight: 400;
-}
-
-.trustpilot-info strong {
-    color: #4C3932;
+.card h3 {
+    font-size: 14px;
     font-weight: 600;
+    margin: 6px 0;
 }
 
-/* Reviews Grid */
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1px;
-    background: #f1f5f9;
-    padding: 0;
-    max-height: 600px;
-    overflow-y: auto;
+.card .harga {
+    font-size: 16px;
+    font-weight: bold;
 }
 
-/* Individual Review Card */
-.review-card {
-    background: white;
-    padding: 25px;
-    position: relative;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid #f1f5f9;
+.card .detail {
+    font-size: 12px;
+    color: gray;
 }
 
-.review-card:hover {
-    background: #fafafa;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+/* Footer */
+footer {
+    background: #C6AC8E;
+    color: #fff;
+    margin-top: 48px;
+    padding-top: 32px;
+    background-image: url("motif batik/BatikFooter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Review Header */
-.review-header {
+.footer-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
+    z-index: 1;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px 32px 32px;
+    border-bottom: 1.5px solid #fff3;
 }
 
-.reviewer-info {
+/*FOOTER LOGO*/
+.footer-logo-area {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.footer-logo-img {
+    width: 250px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.footer-logo {
+    flex: 1 1 180px;
+    font-size: 2rem;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    margin-right: 32px;
+    margin-bottom: 24px;
 }
 
-.reviewer-name {
-    font-size: 15px;
-    font-weight: 600;
-    color: #4C3932;
-    margin-bottom: 4px;
+.footer-link-social {
+    width: 1.9rem;
+    height: 1.9rem;
+    margin-right: 0.2rem;
+    margin-bottom: 0.5rem;
 }
 
-.review-time {
-    font-size: 13px;
-    color: #64748b;
-}
-
-/* Rating Stars */
-.review-rating {
+/*FOOTER LINKS*/
+.footer-links {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex: 4 1 600px;
+    gap: 48px;
+    flex-wrap: wrap;
 }
 
-.stars {
-    font-size: 16px;
-    display: flex;
-    gap: 1px;
+.footer-links h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 2px;
 }
 
-.star {
-    color: #e2e8f0;
-    transition: color 0.2s ease;
-}
-
-.star.filled {
-    color: #FFAE00;
-}
-
-.rating-number {
-    font-size: 13px;
-    color: #64748b;
-    font-weight: 500;
-}
-
-/* Review Content */
-.review-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 12px;
-    line-height: 1.4;
-}
-
-.review-content {
-    font-size: 14px;
-    color: #475569;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Read More Button */
-.read-more-btn {
-    background: none;
-    border: none;
-    color: #3b82f6;
-    font-size: 13px;
-    cursor: pointer;
-    text-decoration: underline;
+.footer-links ul {
+    list-style: none;
     padding: 0;
-    margin-top: 5px;
+    margin: 0;
+    line-height: 1.3rem;
 }
 
-.read-more-btn:hover {
-    color: #1d4ed8;
-}
-
-/* Custom Scrollbar */
-.reviews-grid::-webkit-scrollbar {
-    width: 8px;
-}
-
-.reviews-grid::-webkit-scrollbar-track {
-    background: #f1f5f9;
-}
-
-.reviews-grid::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 4px;
-}
-
-.reviews-grid::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
-}
-
-/* Loading Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.review-card {
-    animation: fadeIn 0.5s ease forwards;
+.footer-links li {
+    margin-bottom: 6px;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .reviews-grid {
+    .hero-content {
         grid-template-columns: 1fr;
-        max-height: 500px;
     }
     
-    .review-card {
-        padding: 20px;
+    .brand-grid {
+        flex-wrap: wrap;
+        gap: 20px;
     }
     
-    .reviews-header {
-        padding: 30px 20px;
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
     
-    .reviews-header h3 {
-        font-size: 28px;
+    .hero, .brands, .categories, .produk-section {
+        padding: 20px 20px;
     }
     
-    .stars-header {
-        font-size: 24px;
+    .footer-content {
+        padding: 0 20px;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .nav-center {
+        margin: 0 20px;
+    }
+    
+    /* Responsive untuk produk grid */
+    .produk-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 480px) {
-    body {
-        padding: 20px 10px;
-    }
-    
-    .review-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    
-    .review-rating {
-        align-self: flex-start;
-    }
-}
+
+        /* Loading Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .review-card {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                max-height: 500px;
+            }
+           
+            .review-card {
+                padding: 20px;
+            }
+           
+            .reviews-header {
+                padding: 30px 15px; /* Kurangi padding di mobile */
+            }
+           
+            .reviews-header h3 {
+                font-size: 28px;
+            }
+           
+            .stars-header {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .reviews-header {
+                padding: 20px 10px; /* Minimal padding */
+            }
+           
+            .review-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+           
+            .review-rating {
+                align-self: flex-start;
+            }
+        }

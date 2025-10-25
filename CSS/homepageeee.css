@@ -272,6 +272,10 @@ body {
     color: #333;
 }
 
+.brand-item:nth-child(1) .brand-circle {
+  background-image: url('adidaslogo.png');
+}
+
 /* Category Section */
 .categories {
     padding: 40px 60px;
