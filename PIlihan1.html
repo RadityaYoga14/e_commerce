@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISO - Cool Sale</title>
+    <link rel="stylesheet" href="Pilihan1.css">
+    <script src="Pilihan1.js"></script>
+</head>
+<body>
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <div class="banner-left">
+                <h1 class="banner-title">COOL<br>SALE</h1>
+                <div class="discount-badge">50% OFF</div>
+                <p class="banner-subtitle">FOR MEN WEAR &<br>WOMAN WEAR</p>
+                <p class="banner-url">www.miso.com</p>
+            </div>
+            <div class="banner-right">
+                <div class="circle-text">SHOP NOW - SHOP NOW - SHOP NOW -</div>
+                <div class="model-image">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=500&fit=crop" alt="Model 1">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Model 2">
+                </div>
+                <div class="brand-badge">
+                    <span>MI<br>SO</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="filter-box">
+                <div class="filter-header" onclick="toggleFilter('kategori')">
+                    <h3>Kategori</h3>
+                    <span class="toggle-icon" id="icon-kategori">☰</span>
+                </div>
+                <div class="filter-content" id="kategori">
+                    <label><input type="checkbox"> Pria</label>
+                    <label><input type="checkbox"> Wanita</label>
+                    <label><input type="checkbox"> Anak-anak</label>
+                    <label><input type="checkbox"> Aksesoris</label>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <div class="filter-header" onclick="toggleFilter('ukuran')">
+                    <h3>Ukuran</h3>
+                    <span class="toggle-icon" id="icon-ukuran">☰</span>
+                </div>
+                <div class="filter-content" id="ukuran">
+                    <label><input type="checkbox"> S</label>
+                    <label><input type="checkbox"> M</label>
+                    <label><input type="checkbox"> L</label>
+                    <label><input type="checkbox"> XL</label>
+                    <label><input type="checkbox"> XXL</label>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <div class="filter-header" onclick="toggleFilter('harga')">
+                    <h3>Harga</h3>
+                    <span class="toggle-icon" id="icon-harga">☰</span>
+                </div>
+                <div class="filter-content" id="harga">
+                    <label><input type="checkbox"> Rp 0 - 500.000</label>
+                    <label><input type="checkbox"> Rp 500.000 - 1.000.000</label>
+                    <label><input type="checkbox"> Rp 1.000.000+</label>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <main class="product-section">
+            <div class="section-header">
+                <h2>Semua Produk Kaos <span class="product-count">- 300 Ditemukan</span></h2>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop" alt="Product">
+                        <span class="coming-soon">COMING SOON</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">BRAND</p>
+                        <p class="product-price">Rp 860.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">4.6 | 100+ terjual</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=500&fit=crop" alt="Product">
+                        <span class="coming-soon">COMING SOON</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">BRAND</p>
+                        <p class="product-price">Rp 860.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">4.6 | 100+ terjual</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1622445275576-721325f5ecb2?w=400&h=500&fit=crop" alt="Product">
+                        <span class="coming-soon">COMING SOON</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">BRAND</p>
+                        <p class="product-price">Rp 860.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">4.6 | 100+ terjual</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=400&h=500&fit=crop" alt="Product">
+                        <span class="coming-soon">COMING SOON</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">BRAND</p>
+                        <p class="product-price">Rp 860.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">4.6 | 100+ terjual</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=500&fit=crop" alt="Product">
+                        <span class="coming-soon">COMING SOON</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">BRAND</p>
+                        <p class="product-price">Rp 860.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">4.6 | 100+ terjual</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1618886614638-80e3c103d31a?w=400&h=500&fit=crop" alt="Product">
+                        <span class="coming-soon">COMING SOON</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">BRAND</p>
+                        <p class="product-price">Rp 860.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">4.6 | 100+ terjual</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
