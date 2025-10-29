@@ -239,6 +239,46 @@ body {
     color: #666;
 }
 
+<<<<<<< HEAD
+=======
+/* Brand Section */
+.brands {
+    padding: 40px 60px;
+}
+
+.brand-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.brand-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #d9d9d9;
+}
+
+.brand-item span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.brand-item:nth-child(1) .brand-circle {
+  background-image: url('adidaslogo.png');
+}
+
+>>>>>>> 28f58f8a6eb5ee1d16d1ad57eedfe4a181c77e23
 /* Category Section */
 .categories {
     padding: 40px 60px;

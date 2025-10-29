@@ -1,8 +1,8 @@
 // Array gambar untuk slider
 const productImages = [
-    'Rectangle30.png',
-    'Yellow2.png', 
-    'white2.png',
+    'produk 1.png',
+    'produk 17.png', 
+    'produk 19.png',
 ];
 
 let currentImageIndex = 0;

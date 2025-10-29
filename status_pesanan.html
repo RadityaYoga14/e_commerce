@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MISO</title>
+  <link rel="stylesheet" href="CSS/status_pesanan.css">
+  <link rel="stylesheet" href="CSS/NavbarStyle.css"> 
+  <link rel="stylesheet" href="CSS/FooterStyle.css">
+  <script src="status_pesanan.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar-bg">
+        <div>  <!--Logo-->
+            <img src="Foto_&_Logo/logo_miso.png" alt="Logo" class="navbar-logo">
+        </div>
+        <div class="icons" style="position: absolute; right: 15px;"> <!-- Icons -->
+            <img src="Foto_&_Logo/CartIcon.png" class="navbar-icons1">
+            <img src="Foto_&_Logo/HeartIcon.png" class="navbar-icons2">
+            <img src="Foto_&_Logo/ProfileIcon.png" class="navbar-icons-b">
+        </div>
+    </nav>
+
+    <br>
+
+    <!-- BELUM BAYAR -->
+    <section class="container">
+        <div class="container-header">
+            <b>Belum Bayar</b>
+            <button onclick="toggleSection('belum-bayar', this)" class="button-show">▼</button>
+        </div>
+        <section id="belum-bayar"> <hr>
+        <div class="baju">
+            <img src="Foto_&_Logo/produk 11.webp" class="image1">
+                <div class="baju-info">
+                    <b>Sandal Leather - ABCBRAND Collection</b>
+                    <p>Rp. 210.000</p>
+                    <p style="font-size: 11px;">Bayar sebelum 04 Juli 2021</p>
+                </div>
+                <button class="button-coloured">Bayar Sekarang</button>
+                <button class="button-clear">Cancel Pesanan</button>
+            </div>
+        </section>
+    </section>
+
+    <!-- DIKEMAS -->
+    <section class="container">
+        <div class="container-header">
+            <b>Dikemas</b>
+            <button onclick="toggleSection('dikemas', this)" class="button-show">▼</button>
+        </div>
+        <section id="dikemas"> <hr>
+        <div class="baju"> <!--DIV1-->
+            <img src="Foto_&_Logo/produk 16.webp" class="image1">
+                <div class="baju-info">
+                    <b>Red Skeleton T-Shirt</b>
+                    <p>Status: Belum Dikemas</p>
+                    <p style="font-size: 11px;">Estimasi pengiriman pada tanggal 02 Februari 2022.</p>
+                </div>
+                <button class="button-coloured">Lacak Pesanan</button>
+            </div>
+        <div class="baju"> <!--DIV2-->
+            <img src="Foto_&_Logo/produk 2.webp" class="image1">
+                <div class="baju-info">
+                    <b>Flowering Waistband by 11037</b>
+                    <p>Status: Sudah Dikemas</p>
+                    <p style="font-size: 11px;">Estimasi pengiriman pada tanggal 30 Agustus 2025.</p>
+                </div>
+                <button class="button-coloured">Lacak Pesanan</button>
+            </div>
+        </section>
+    </section>
+
+    <!-- DIKIRIM -->
+    <section class="container">
+        <div class="container-header">
+            <b>Dikirim</b>
+            <button onclick="toggleSection('dikirim', this)" class="button-show">▼</button>
+        </div>
+        <section id="dikirim"> <hr>
+        <div class="baju">
+            <img src="Foto_&_Logo/produk1.jpg" class="image1">
+                <div class="baju-info">
+                    <b>Sweater Hello Kitty & Friends</b>
+                    <p>Status: Dalam Pengiriman</p>
+                    <p style="font-size: 11px;">Estimasi paket sampai pada 25 Desember 2025</p>
+                </div>
+                <button class="button-coloured">Lacak Pesanan</button>
+            </div>
+        </section>
+    </section>
+
+    <!-- PESANAN SELESAI -->
+    <section class="container">
+        <div class="container-header">
+            <b>Pesanan Selesai</b>
+            <button onclick="toggleSection('pesanan-selesai', this)" class="button-show">▼</button>
+        </div>
+        <section id="pesanan-selesai"> <hr>
+        <div class="baju">
+            <img src="Foto_&_Logo/produk 12.webp" class="image1">
+                <div class="baju-info">
+                    <b>Cyan Windbreaker</b>
+                    <p>Dipesan pada: 04 April 2025</p>
+                    <p style="font-size: 11px;">Produk telah sampai pada 07 April 2025</p>
+                </div>
+                <button class="button-coloured">Lihat Info Lengkap</button>
+            </div>
+        </section>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="margin-top: 150px;"> <!--Footer-->
+        <div class="footer-content"> <!--Semua konten footer.-->
+            <div class="footer-logo-area"> <!--AREA LOGO-->
+                <img src="Foto_&_Logo/logo_miso.png" class="footer-logo-img">
+            </div>
+            <div class="footer-links"> <!--Link-Link Footer-->
+                <div> <!--Kategori MISO-->
+                    <h4>MISO</h4>
+                    <ul>
+                        <li>Tentang MISO</li>
+                        <li>Hak Kekayaan Intelektual</li>
+                        <li>Syarat dan Ketentuan</li>
+                        <li>Kebijakan Privasi</li>
+                        <li>Sertifikat</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+                <div> <!--Kategori Pembelian & Penjualan-->
+                    <h4>PEMBELIAN</h4>
+                    <ul>
+                        <li>MISO Help Center</li>
+                        <li>Pelacakan Paket</li>
+                        <li>Pengembalian Produk</li>
+                    </ul> <br>
+                    <h4>PENJUALAN</h4>
+                    <ul>
+                        <li>MISO Brand Applications</li>
+                        <li>MISO Affiliate Program</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>IKUTI KAMI:</h4> <br>
+                    <img src="Foto_&_Logo/IGLogo.png" class="footer-link-social">
+                    <img src="Foto_&_Logo/TTLogo.png" class="footer-link-social">
+                    <img src="Foto_&_Logo/XLogo.png" class="footer-link-social">
+                    <img src="Foto_&_Logo/PinterestLogo.png" class="footer-link-social"> <br>
+                    <ul>
+                        <li>© 2025 - 2026, MISO</li>
+                        <li>All rights reserved.</li>
+                    </ul>
+                </div>
+            </div> <!--End link-link footer-->
+        </div> <!--End konten footer.-->
+    </footer>
+
+</body>
