@@ -239,6 +239,8 @@ body {
     color: #666;
 }
 
+<<<<<<< HEAD
+=======
 /* Brand Section */
 .brands {
     padding: 40px 60px;
@@ -276,6 +278,7 @@ body {
   background-image: url('adidaslogo.png');
 }
 
+>>>>>>> 28f58f8a6eb5ee1d16d1ad57eedfe4a181c77e23
 /* Category Section */
 .categories {
     padding: 40px 60px;
