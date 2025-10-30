@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang | MISO</title>
+    <link rel="stylesheet" href="CSS/keranjang.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar-bg">
+        <!--Logo-->
+        <div>
+            <a href="homepage.html"><img src="Foto_&_Logo/logo_miso.png" alt="Logo" class="navbar-logo"></a>
+        </div>
+
+        <!--Searchbar-->
+        <div class="navbar-search">
+            <input type="text" placeholder="Carilah produk impianmu...">
+        <!--Ikon search-->
+            <svg xmlns="http://www.w3.org/2000/svg" class="navbar-icon-search" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" 
+                    fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <!--Kategori-->
+        <div class="navbar-kategori">
+            <button class="navbar-kategori-btn">
+            Kategori
+            <img src="Foto_&_Logo/KategoriIcon.png" class="navbar-icons">
+            <div class="navbar-kategori-dropdown">
+                <a href="#" style="margin-top: 10px;">Kaos</a>
+                <a href="#">Kemeja</a>
+                <a href="#">Celana</a>
+                <a href="#">Rok</a>
+                <a href="#">Sepatu</a>
+                <a href="#" style="margin-bottom: 10px;">Baju Muslim</a>
+            </div>
+        </button>
+        
+        </div>
+        <div class="icons">
+        <!-- Icons -->
+        <img src="Foto_&_Logo/CartIcon.png" class="navbar-icons1">
+        <a href="favproducts.html"><img src="Foto_&_Logo/HeartIcon.png" class="navbar-icons2"></a>
+        <a href="Profile_page.html"><img src="Foto_&_Logo/ProfileIcon.png" class="navbar-icons-b"></a>
+        </div>
+    </nav>
+
+    <h2>Keranjang (5)</h2>
+
+  <div class="alamat">
+    <div>
+      <strong>Alamat Pengiriman</strong>
+      <p>Jln. Aku cinta anime, Denpasar Timur, Bali, ID 9999</p>
+    </div>
+    <button>Ubah</button>
+  </div>
+
+  <div class="container">
+    <!-- Daftar Produk -->
+    <div class="produk-list">
+      <div class="card-toko">
+        <p><strong>Callie Official Shop</strong> (1 Barang)</p>
+        <div class="produk">
+          <img src="Foto_&_Logo/produk1.jpg" alt="cardigan" />
+          <div class="produk-detail">
+            <h3>Callie Cotton X Hello Kitty - Mimmy Cardigan</h3>
+            <p>Ukuran: XL</p>
+            <select>
+              <option>Jumlah: 2</option>
+            </select>
+            <select>
+              <option>Varian: Navy</option>
+            </select>
+            <p class="harga">Rp 455.000</p>
+            <span class="diskon">Diskon hingga 40%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-toko">
+        <p><strong>ZARA Official Shop</strong> (1 Barang)</p>
+        <div class="produk">
+          <img src="https://i.imgur.com/o5Irzxt.png" alt="kemeja" />
+          <div class="produk-detail">
+            <h3>ZARA - Kemeja kantoran wanita</h3>
+            <p>Ukuran: XL</p>
+            <select>
+              <option>Jumlah: 1</option>
+            </select>
+            <select>
+              <option>Varian: White</option>
+            </select>
+            <p class="harga">Rp 799.000</p>
+            <span class="diskon">Diskon hingga 40%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ringkasan Pesanan -->
+    <div class="ringkasan">
+      <h3>Jumlah Pesanan</h3>
+
+      <label class="voucher">
+        Cashback digunakan
+        <input type="checkbox" id="cashbackToggle" checked />
+      </label>
+
+      <div class="voucher" id="voucherBtn">
+        Voucher tambahan hingga potongan 10%
+        <span>›</span>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="row"><span>Subtotal (2 produk)</span><span>Rp 455.000</span></div>
+      <div class="row"><span>Total Penghematan</span><span id="diskon">- Rp 222.000</span></div>
+      <div class="row"><span>Pengiriman</span><span>Rp 31.000</span></div>
+
+      <div class="dropdown">
+        <label for="metode">Metode Pembayaran</label>
+        <select class="metode" id="metode">
+          <option>Transfer Bank</option>
+          <option>OVO</option>
+          <option>GoPay</option>
+          <option>Credit Card</option>
+        </select>
+      </div>
+
+      <div class="total"><span>Total</span><span id="totalHarga">Rp 233.000</span></div>
+
+      <button class="checkout">CHECKOUT</button>
+    </div>
+  </div>
+  <footer> <!--Footer-->
+        <div class="footer-content"> <!--Semua konten footer.-->
+            <div class="footer-logo-area"> <!--AREA LOGO-->
+                <img src="Foto_&_Logo/logo_miso.png" class="footer-logo-img">
+            </div>
+            <div class="footer-links"> <!--Link-Link Footer-->
+                <div> <!--Kategori MISO-->
+                    <h4>MISO</h4>
+                    <ul>
+                        <li>Tentang MISO</li>
+                        <li>Hak Kekayaan Intelektual</li>
+                        <li>Syarat dan Ketentuan</li>
+                        <li>Kebijakan Privasi</li>
+                        <li>Sertifikat</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+                <div> <!--Kategori Pembelian & Penjualan-->
+                    <h4>PEMBELIAN</h4>
+                    <ul>
+                        <li>MISO Help Center</li>
+                        <li>Pelacakan Paket</li>
+                        <li>Pengembalian Produk</li>
+                    </ul> <br>
+                    <h4>PENJUALAN</h4>
+                    <ul>
+                        <li>MISO Brand Applications</li>
+                        <li>MISO Affiliate Program</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>IKUTI KAMI:</h4> <br>
+                    <img src="Foto_&_Logo/IGLogo.png" class="footer-link-social">
+                    <img src="Foto_&_Logo/TTLogo.png" class="footer-link-social">
+                    <img src="Foto_&_Logo/XLogo.png" class="footer-link-social">
+                    <img src="Foto_&_Logo/PinterestLogo.png" class="footer-link-social"> <br>
+                    <ul>
+                        <li>© 2025 - 2026, MISO</li>
+                        <li>All rights reserved.</li>
+                    </ul>
+                </div>
+            </div> <!--End link-link footer-->
+        </div> <!--End konten footer.-->
+</footer>
+  <script>
+    const cashbackToggle = document.getElementById("cashbackToggle");
+    const totalHarga = document.getElementById("totalHarga");
+    const diskon = document.getElementById("diskon");
+    const voucherBtn = document.getElementById("voucherBtn");
+
+    let cashbackAktif = true;
+    let voucherAktif = false;
+
+    voucherBtn.addEventListener("click", () => {
+      voucherAktif = !voucherAktif;
+      voucherBtn.style.border = voucherAktif ? "2px solid #4c382b" : "1px solid #efe3d9";
+      hitungTotal();
+    });
+
+    cashbackToggle.addEventListener("change", () => {
+      cashbackAktif = cashbackToggle.checked;
+      hitungTotal();
+    });
+
+    function hitungTotal() {
+      const subtotal = 455000;
+      const pengiriman = 31000;
+      let penghematan = 222000;
+      let total = subtotal - penghematan + pengiriman;
+
+      if (voucherAktif) {
+        total *= 0.9; // potongan 10%
+      }
+      if (!cashbackAktif) {
+        total += 20000; // misal cashbacknya ngurangin segini
+      }
+
+      diskon.textContent = "- Rp " + penghematan.toLocaleString("id-ID");
+      totalHarga.textContent = "Rp " + Math.round(total).toLocaleString("id-ID");
+    }
+  </script>
+</body>
+</html>
