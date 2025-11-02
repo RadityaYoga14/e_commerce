@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISO - Cool Sale</title>
+    <link rel="stylesheet" href="CSS/Pilihan1.css">
+    <script src="Pilihan1.js"></script>
+</head>
+<body>
+
+     <!-- Bar Diskon -->
+  <div class="top-bar">
+    <marquee width="60%" direction="left" height="20px" >
+   Road to 9.9 Sale Up to 75% + Voucher Up to 35% + Tumpuk Up to 8% ⭐ Road to 9.9 Sale Up to 75% + Voucher Up to 35% + Tumpuk Up to 8%
+   </marquee>
+  </div>
+    <!-- Header -->
+  <header class="header">
+    <!-- Logo -->
+    <div class="logo">
+        <a href="homepage.html">
+       <img src="logomiso.png" alt="MISO Logo">
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+      <a href="homepage.html">Shop</a>
+      <a href="fashion.html">Fashion</a>
+      <a href="about.html">New</a>
+    </nav>
+
+    <!--Searchbar-->
+        <div class="navbar-search">
+        <input type="text" placeholder="Carilah produk impianmu...">
+    <!--Ikon search-->
+        <svg xmlns="http://www.w3.org/2000/svg" class="navbar-icon-search" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" 
+                fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </div>
+
+    <!-- Icons kanan -->
+     <div class="icons">
+       <a href=" ">
+       <img src="Foto_&_Logo/CartIcon.png" class="navbar-icons1">
+       </a>
+       <a href="favproducts.html">
+       <img src="Foto_&_Logo/HeartIcon.png" class="navbar-icons2">
+       </a>
+       <a href="Profile_page.html">
+       <img src="Foto_&_Logo/ProfileIcon.png" class="navbar-icons-b">
+       </a>
+    </div>
+    
+  </header>
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-section">
+            <img src="Foto_&_Logo/bannerlarge3.jpg" class="banner-img">
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="filter-box">
+                <div class="filter-header" onclick="toggleFilter('kategori')">
+                    <h3>Kategori</h3>
+                    <span class="toggle-icon" id="icon-kategori">☰</span>
+                </div>
+                <div class="filter-content" id="kategori">
+                    <label><input type="checkbox"> Pria</label>
+                    <label><input type="checkbox"> Wanita</label>
+                    <label><input type="checkbox"> Anak-anak</label>
+                    <label><input type="checkbox"> Aksesoris</label>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <div class="filter-header" onclick="toggleFilter('ukuran')">
+                    <h3>Ukuran</h3>
+                    <span class="toggle-icon" id="icon-ukuran">☰</span>
+                </div>
+                <div class="filter-content" id="ukuran">
+                    <label><input type="checkbox"> S</label>
+                    <label><input type="checkbox"> M</label>
+                    <label><input type="checkbox"> L</label>
+                    <label><input type="checkbox"> XL</label>
+                    <label><input type="checkbox"> XXL</label>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <div class="filter-header" onclick="toggleFilter('harga')">
+                    <h3>Harga</h3>
+                    <span class="toggle-icon" id="icon-harga">☰</span>
+                </div>
+                <div class="filter-content" id="harga">
+                    <label><input type="checkbox"> Rp 0 - 500.000</label>
+                    <label><input type="checkbox"> Rp 500.000 - 1.000.000</label>
+                    <label><input type="checkbox"> Rp 1.000.000+</label>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <main class="product-section">
+            <div class="section-header">
+                <h2>Semua Produk Kaos <span class="product-count">- 300 Ditemukan</span></h2>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Foto_&_Logo/produk 22.jpg" alt="Product">
+                        <span class="coming-soon">STUSSY</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Basic stussy tee</p>
+                        <p class="product-price">Rp 750.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">4.5 | 1rb+ terjual</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Foto_&_Logo/produk 21.jpg" alt="Product">
+                        <span class="coming-soon">H&M</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Tupac Shakur T-shirt </p>
+                        <p class="product-price">Rp 239.340</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">4.6 | 897 terjual</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Foto_&_Logo/produk 23.jpg" alt="Product">
+                        <span class="coming-soon">HUSH PUPPIES</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Cordella Polo Slim Fit Polo</p>
+                        <p class="product-price">Rp 229.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">4.1 | 478 terjual</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Foto_&_Logo/produk 24.jpg" alt="Product">
+                        <span class="coming-soon">UNIQLO</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">UT Peanuts Lengan Pendek</p>
+                        <p class="product-price">Rp 199.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">4.9 | 10rb+ terjual</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Foto_&_Logo/produk 26.jpg" alt="Product">
+                        <span class="coming-soon">UNIQLO</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">T-Shirt Rajut Washable Milano Rib </p>
+                        <p class="product-price">Rp 399.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">4.0 | 567 terjual</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="product-card">
+                    <div class="product-image">
+                        <img src="Foto_&_Logo/produk 16.webp" alt="Product">
+                        <span class="coming-soon">THIRD DAY</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Third Day - Scuba Tshirt Burgundy</p>
+                        <p class="product-price">Rp 135.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">5.0 | 10rb+ terjual</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="product-card">
+                    <div class="product-image">
+                        <img src="Foto_&_Logo/produk 6.webp" alt="Product">
+                        <span class="coming-soon">ERIGO</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">ERIGO - T-Shirt Yahiko Unisex</p>
+                        <p class="product-price">Rp 80.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">4.9 | 245 terjual</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="product-card">
+                    <div class="product-image">
+                        <img src="Foto_&_Logo/produk 25.jpg" alt="Product">
+                        <span class="coming-soon">SATISFY</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">MothTech™ T‑Shirt</p>
+                        <p class="product-price">Rp 748.201</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">3.0 | 100 terjual</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Foto_&_Logo/produk 27.jpg" alt="Product">
+                        <span class="coming-soon">ADIDAS</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Smiley Loose 3-Stripes T-Shirt</p>
+                        <p class="product-price">Rp 504.000</p>
+                        <div class="product-rating">
+                            <span class="star">⭐</span>
+                            <span class="rating-text">5.0 | 1rb+ terjual</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,13 +1,13 @@
 // Array gambar untuk slider
 const productImages = [
-    'produk 1.png',
+    'callie.png',
     'produk 17.png', 
     'produk 19.png',
 ];
 
 let currentImageIndex = 0;
-let selectedColor = 'yellow';
-let selectedSize = 'M';
+let selectedColor = 'navy';
+let selectedSize = 'L';
 let currentQuantity = 1;
 
 // Fungsi untuk menampilkan pesan notifikasi
@@ -158,9 +158,9 @@ function toggleLove() {
 // Fungsi untuk add to cart
 function addToCart() {
     const productData = {
-        name: 'Kemeja kantoran wanita',
-        brand: 'ZARA',
-        price: 'Rp. 799.000',
+        name: 'Callie X Hello Kitty cardigan',
+        brand: 'CALLIE',
+        price: 'Rp. 445.000',
         color: selectedColor,
         size: selectedSize,
         quantity: currentQuantity
@@ -173,9 +173,9 @@ function addToCart() {
 // Fungsi untuk buy now
 function buyNow() {
     const productData = {
-        name: 'Kemeja kantoran wanita',
-        brand: 'ZARA',
-        price: 'Rp. 799.000',
+        name: 'Callie X Hello Kitty cardigan',
+        brand: 'CALLIE',
+        price: 'Rp. 445.000',
         color: selectedColor,
         size: selectedSize,
         quantity: currentQuantity
