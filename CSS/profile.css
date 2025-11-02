@@ -25,6 +25,7 @@ hr {
     align-items: center;
     height: 60px;
     background-color: #C6AC8E;
+    background-image: url("../motif batik/BatikNavbar.png");
 }
 
 .navbar-logo-area {
@@ -150,7 +151,7 @@ footer {
     color: #fff;
     margin-top: 48px;
     padding-top: 32px;
-    background-image: url("motif batik/BatikFooter.png");
+    background-image: url("../motif batik/BatikFooter.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
